@@ -9,7 +9,8 @@
 body {
   height: 100vh;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #0a0f1f, #1b2a4e, #4b6cb7);
+  background: url("images/thumb-1920-1289303.png")no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
