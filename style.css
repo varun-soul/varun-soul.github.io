@@ -122,5 +122,10 @@ footer {
   text-align: center; /* keeps the title centered */
 }
 
+.subpage-card p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
 
 
