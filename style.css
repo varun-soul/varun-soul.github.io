@@ -27,7 +27,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #f5f5f5;
-  animation: fadeIn 1.2s ease-in-out;
+  /*animation: fadeIn 1.2s ease-in-out;*/
 }
 
 .container {
@@ -94,8 +94,5 @@ footer {
   padding: 1rem 0;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+
 
