@@ -45,9 +45,7 @@ body {
   padding: 2rem 3rem;
   border-radius: 20px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease;\
-  max-width: 600px;
-  width: 90%;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
@@ -112,6 +110,17 @@ footer {
 
 .back-link:hover {
   color: #ffffff;
+}
+
+.subpage-card {
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
+}
+
+.subpage-card h1 {
+  margin-bottom: 1.5rem;
+  text-align: center; /* keeps the title centered */
 }
 
 
