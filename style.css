@@ -45,12 +45,19 @@ body {
   padding: 2rem 3rem;
   border-radius: 20px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease;\
+  max-width: 600px;
+  width: 90%;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
+
+.card h1 {
+  margin-bottom: 1rem; /* adds gap between title and paragraph */
+}
+
 
 .title {
   font-size: 2.5rem;
