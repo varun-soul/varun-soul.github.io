@@ -95,5 +95,17 @@ footer {
   padding: 1rem 0;
 }
 
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #cfd8ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #ffffff;
+}
+
 
 
