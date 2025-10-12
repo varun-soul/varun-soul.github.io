@@ -163,4 +163,39 @@ footer {
   margin: 0; /* remove the small left indent if present */
 }
 
+/* BLOG */
+
+.blog-body {
+  background: #f9f9f9;
+  color: #222;
+  font-family: 'Georgia', serif;
+}
+
+.blog-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+.blog-entry {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1.5rem;
+}
+
+.blog-entry h2 a {
+  color: #222;
+  text-decoration: none;
+}
+
+.blog-entry h2 a:hover {
+  text-decoration: underline;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
 
