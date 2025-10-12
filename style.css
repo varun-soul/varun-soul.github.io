@@ -127,5 +127,21 @@ footer {
   line-height: 1.6;
 }
 
+.projects-list {
+  margin-top: 20px;
+}
+
+.project-item {
+  margin-bottom: 30px; /* space between projects */
+}
+
+.project-item h2 {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.project-item p {
+  line-height: 1.6;
+}
 
 
