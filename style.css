@@ -117,6 +117,13 @@ footer {
   width: 90%;
 }
 
+.subpage-card .project-item {
+  text-align: left; /* force left alignment only for project content */
+  display: inline-block; /* ensures left alignment actually takes effect */
+  width: 90%; /* optional: keeps it nicely within card boundaries */
+  margin: 0 auto 35px auto;
+}
+
 .subpage-card h1 {
   margin-bottom: 1.5rem;
   text-align: center; /* keeps the title centered */
