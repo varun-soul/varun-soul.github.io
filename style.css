@@ -163,33 +163,4 @@ footer {
   margin: 0; /* remove the small left indent if present */
 }
 
-/* Navigation Bar */
-.navbar {
-  position: absolute;
-  top: 25px;                /* distance from top of screen */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.6rem 1.2rem;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-}
-
-.navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s, transform 0.2s;
-}
-
-.navbar a:hover {
-  color: #cfd8ff;
-  transform: translateY(-2px);
-}
-
-
 
