@@ -134,17 +134,25 @@ footer {
   line-height: 1.6;
 }
 
+/* Ensure the projects area itself is a left-aligned block centered in the card */
 .projects-list {
-  margin-top: 20px;
+  width: 100%;
+  max-width: 520px;   /* controls the reading width of the project text */
+  margin: 0 auto 20px;/* centers the project list block inside the card */
+  text-align: left;   /* important: left-align text inside this block */
+  display: block;
 }
 
+/* Each project is a normal block that fills the projects-list width */
 .project-item {
+  display: block;
+  width: 100%;
   margin-bottom: 35px; /* space between projects */
-  text-align: left; /* aligns content to the left */
 }
 
+/* Title and paragraph left-aligned */
 .project-item h2 {
-  margin-bottom: 10px; /* space between title and description */
+  margin-bottom: 12px;
   font-size: 1.3em;
   text-align: left;
 }
@@ -152,8 +160,9 @@ footer {
 .project-item p {
   line-height: 1.6;
   text-align: left;
-  margin-left: 5px; /* optional small indent for a clean look */
+  margin: 0; /* remove the small left indent if present */
 }
+
 
 
 
