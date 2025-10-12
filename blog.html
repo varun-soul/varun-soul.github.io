@@ -68,5 +68,17 @@
   </div>
 
   <footer>© 2025 Varun Naudiyal</footer>
+  
+  <script>
+  // Automatically load MathJax globally from mathjax.html
+  fetch('/mathjax.html')
+    .then(res => res.text())
+    .then(txt => {
+      const div = document.createElement('div');
+      div.innerHTML = txt;
+      document.body.appendChild(div);
+    });
+</script>
+
 </body>
 </html>
