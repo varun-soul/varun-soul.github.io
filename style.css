@@ -139,7 +139,7 @@ footer {
   width: 100%;
   max-width: 520px;   /* controls the reading width of the project text */
   margin: 0 auto 20px;/* centers the project list block inside the card */
-  text-align: left;   /* important: left-align text inside this block */
+  text-align: center;   /* important: left-align text inside this block */
   display: block;
 }
 
