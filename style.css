@@ -132,16 +132,21 @@ footer {
 }
 
 .project-item {
-  margin-bottom: 30px; /* space between projects */
+  margin-bottom: 35px; /* space between projects */
+  text-align: left; /* aligns content to the left */
 }
 
 .project-item h2 {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* space between title and description */
   font-size: 1.3em;
+  text-align: left;
 }
 
 .project-item p {
   line-height: 1.6;
+  text-align: left;
+  margin-left: 5px; /* optional small indent for a clean look */
 }
+
 
 
