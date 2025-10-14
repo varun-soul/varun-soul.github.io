@@ -4,7 +4,7 @@
 
 This is a **test post** written in Markdown.
 
-Inline math: \( E = mc^2 \)
+Inline math: \(E = mc^2\)
 
 Display math:
 
