@@ -9,14 +9,17 @@
 
 <body class="blog-body">
   <div class="blog-container" id="content">Loading...</div>
-  <a href="../blog.html" class="back-link">← Back to Blog</a>
-  <footer>© 2025 Varun Naudiyal</footer>
+
+  <!-- Back link and footer inside container wrapper to center them -->
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="../blog.html" class="back-link">← Back to Blog</a>
+    <footer>© 2025 Varun Naudiyal</footer>
+  </div>
 
   <!-- Load Showdown for Markdown conversion -->
   <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 
   <script>
-    // --- Load MathJax dynamically ---
     function loadMathJax() {
       if (window.MathJax && window.MathJax.typesetPromise) return Promise.resolve(window.MathJax);
       window.MathJax = {
@@ -42,7 +45,6 @@
         .catch(err => console.error('MathJax error:', err));
     }
 
-    // --- Load and render Markdown ---
     (function() {
       const urlParams = new URLSearchParams(window.location.search);
       const file = urlParams.get('file');
