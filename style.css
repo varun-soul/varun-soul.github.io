@@ -198,15 +198,20 @@ footer {
   color: #777;
 }
 
-/* --- Override layout for blog pages --- */
+/* --- Blog page overrides --- */
 body.blog-body {
-  height: auto;              /* allow full height */
-  display: block;            /* stop flexbox centering */
-  justify-content: initial;
-  align-items: initial;
-  overflow-y: auto;          /* enable scrolling */
-  background: #f9f9f9;       /* keep your blog background */
-  color: #222;
+  display: block !important;       /* remove flex centering */
+  height: auto !important;         /* let the page grow with content */
+  min-height: 100vh;
+  overflow-y: auto;                /* enable vertical scrolling */
+  margin: 0;
+  padding: 0;
+  color: #e0e0e0;
+}
+
+body.blog-body .blog-container {
+  margin-top: 80px;   /* optional: space from top of viewport */
+  margin-bottom: 80px; /* optional: space at bottom */
 }
 
 
