@@ -198,4 +198,15 @@ footer {
   color: #777;
 }
 
+/* --- Override layout for blog pages --- */
+body.blog-body {
+  height: auto;              /* allow full height */
+  display: block;            /* stop flexbox centering */
+  justify-content: initial;
+  align-items: initial;
+  overflow-y: auto;          /* enable scrolling */
+  background: #f9f9f9;       /* keep your blog background */
+  color: #222;
+}
+
 
