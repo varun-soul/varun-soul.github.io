@@ -162,18 +162,13 @@ footer {
 
 /* BLOG PAGES */
 body.blog-body {
-  display: block !important;
-  height: auto !important;
-  min-height: 100vh;
-  overflow-y: auto;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif; /* match main site */
-  color: #f5f5f5;                   /* match main site text color */
-  line-height: 1.8;                 /* match site spacing */
+  font-family: 'Inter', sans-serif;
+  color: #e0e0e0;
   background: url("/images/space1.png") no-repeat center center fixed;
   background-size: cover;
-  transition: all 0.3s ease;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
 body.blog-body::before {
@@ -185,43 +180,55 @@ body.blog-body::before {
   z-index: -1;
 }
 
-/* Blog container style (slightly transparent card) */
-body.blog-body .blog-container {
+.blog-container {
   max-width: 800px;
   margin: 80px auto;
-  padding: 40px 20px;
   background: rgba(20, 20, 30, 0.75);
   backdrop-filter: blur(10px);
   border-radius: 20px;
+  padding: 40px 20px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.5);
   line-height: 1.8;
-  color: inherit;
-  transition: all 0.3s ease;
+  color: #e0e0e0;
 }
 
-/* Optional hover effect like homepage cards */
-body.blog-body .blog-container:hover {
-  transform: translateY(-5px);
-}
-
-/* Blog headings */
-body.blog-body .blog-container h1,
-body.blog-body .blog-container h2,
-body.blog-body .blog-container h3 {
+/* Headings without glow */
+.blog-container h1,
+.blog-container h2,
+.blog-container h3 {
   color: #fff;
   margin-top: 20px;
   margin-bottom: 15px;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  text-shadow: none; /* remove glow */
 }
 
-/* Blog links */
-body.blog-body .blog-container a {
+.blog-container p {
+  margin-bottom: 18px;
+}
+
+.blog-container a {
   color: #8ab4f8;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
-body.blog-body .blog-container a:hover {
-  color: #ffffff;
+.blog-container a:hover {
   text-decoration: underline;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  color: #ccc;
+}
+
+.back-link:hover {
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  color: #aaa;
+  margin-top: 40px;
+  font-size: 0.9rem;
 }
