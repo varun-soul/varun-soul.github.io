@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Post | Varun Naudiyal</title>
   <link rel="stylesheet" href="../style.css">
-  <style>
-    /* Global font size reduction for MathJax output */
-    .mjx-chtml {
-      font-size: 0.65em !important; /* Adjust this value to make math bigger/smaller */
-    }
-  </style>
 </head>
 
 <body class="blog-body">
@@ -26,15 +20,21 @@
   <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 
   <script>
+    // Load MathJax with global scaling
     function loadMathJax() {
       if (window.MathJax && window.MathJax.typesetPromise) return Promise.resolve(window.MathJax);
+
       window.MathJax = {
         tex: {
           inlineMath: [['\\(', '\\)'], ['$', '$']],
           displayMath: [['$$','$$'], ['\\[','\\]']]
         },
-        options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+        options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] },
+        chtml: {
+          scale: 0.8   // <-- Global scale for all math
+        }
       };
+
       return new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
@@ -51,6 +51,7 @@
         .catch(err => console.error('MathJax error:', err));
     }
 
+    // Load Markdown file and render
     (function() {
       const urlParams = new URLSearchParams(window.location.search);
       const file = urlParams.get('file');
