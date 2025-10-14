@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post | Varun Naudiyal</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .blog-container {
+      max-width: 800px;
+      margin: 80px auto;
+      background: rgba(20, 20, 30, 0.75);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      color: #e0e0e0;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="blog-container" id="content">Loading...</div>
+  <a href="../blog.html" class="back-link">← Back to Blog</a>
+  <footer>© 2025 Varun Naudiyal</footer>
+
+  <!-- Load Showdown (Markdown converter) -->
+  <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+
+  <script>
+    // Get ?file=... from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get('file');
+
+    if (!file) {
+      document.getElementById('content').innerHTML = "<p>No file specified.</p>";
+    } else {
+      fetch(file)
+        .then(res => res.text())
+        .then(md => {
+          const converter = new showdown.Converter({tables: true, ghCodeBlocks: true});
+          const html = converter.makeHtml(md);
+          document.getElementById('content').innerHTML = html;
+
+          // Load MathJax for LaTeX
+          fetch('/mathjax.html')
+            .then(res => res.text())
+            .then(txt => {
+              const div = document.createElement('div');
+              div.innerHTML = txt;
+              document.body.appendChild(div);
+            });
+        });
+    }
+  </script>
+</body>
+</html>
