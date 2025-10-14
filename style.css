@@ -161,12 +161,16 @@ footer {
 }
 
 /* BLOG PAGES */
+/* BLOG PAGES */
 body.blog-body {
   font-family: 'Inter', sans-serif;
   color: #e0e0e0;
   background: url("/images/space1.png") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
+  height: auto !important;         /* let body grow with content */
+  display: block !important;       /* remove flex centering */
+  overflow-y: auto;                /* enable vertical scrolling */
   padding: 0;
   margin: 0;
 }
