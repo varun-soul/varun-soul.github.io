@@ -5,49 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Post | Varun Naudiyal</title>
   <link rel="stylesheet" href="../style.css">
-
-  <style>
-    .blog-container {
-      max-width: 800px;
-      margin: 80px auto;
-      background: rgba(20, 20, 30, 0.75);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-      color: #e0e0e0;
-      line-height: 1.8;
-    }
-
-    .blog-container h1, .blog-container h2, .blog-container h3 {
-      color: #fff;
-      margin-top: 20px;
-      margin-bottom: 15px;
-    }
-
-    .blog-container a {
-      color: #8ab4f8;
-      text-decoration: none;
-    }
-
-    .blog-container a:hover {
-      text-decoration: underline;
-    }
-
-    .back-link {
-      display: block;
-      text-align: center;
-      margin-top: 40px;
-      color: #ccc;
-    }
-
-    footer {
-      text-align: center;
-      color: #aaa;
-      margin-top: 40px;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 
 <body class="blog-body">
@@ -55,18 +12,19 @@
   <a href="../blog.html" class="back-link">← Back to Blog</a>
   <footer>© 2025 Varun Naudiyal</footer>
 
-  <!-- Load Showdown (for Markdown conversion) -->
+  <!-- Load Showdown for Markdown conversion -->
   <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 
   <script>
-    // --- Load MathJax dynamically and typeset ---
+    // --- Load MathJax dynamically ---
     function loadMathJax() {
       if (window.MathJax && window.MathJax.typesetPromise) return Promise.resolve(window.MathJax);
       window.MathJax = {
         tex: {
           inlineMath: [['\\(', '\\)'], ['$', '$']],
           displayMath: [['$$','$$'], ['\\[','\\]']]
-        }
+        },
+        options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
       };
       return new Promise((resolve, reject) => {
         const script = document.createElement('script');
@@ -84,7 +42,7 @@
         .catch(err => console.error('MathJax error:', err));
     }
 
-    // --- Load and render Markdown file ---
+    // --- Load and render Markdown ---
     (function() {
       const urlParams = new URLSearchParams(window.location.search);
       const file = urlParams.get('file');
@@ -101,9 +59,9 @@
           return res.text();
         })
         .then(md => {
-          const conv = new showdown.Converter({tables: true, ghCodeBlocks: true});
-          container.innerHTML = conv.makeHtml(md);
-          return typesetMath(container); // Render LaTeX after Markdown
+          const converter = new showdown.Converter({tables: true, ghCodeBlocks: true});
+          container.innerHTML = converter.makeHtml(md);
+          return typesetMath(container);
         })
         .catch(err => {
           container.innerHTML = "<p>Error loading post.</p>";
