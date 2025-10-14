@@ -2,9 +2,9 @@
 
 *Date: October 14, 2025*
 
-This is a **test post** written in Markdown.
+This is a **test post** written in Markdown. Lets see how this will look like in the blog. I hope it works out fine lol. This is pretty much a black box for me hahaha
 
-Inline math: \(E = mc^2\)
+Inline math: $E = mc^2$
 
 Display math:
 
