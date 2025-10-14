@@ -20,14 +20,13 @@ body::before {
 body {
   height: 100vh;
   font-family: 'Inter', sans-serif;
-  background: url("images/space1.png")no-repeat center center fixed;
+  background: url("images/space1.png") no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #f5f5f5;
-  /*animation: fadeIn 1.2s ease-in-out;*/
 }
 
 .container {
@@ -53,9 +52,8 @@ body {
 }
 
 .card h1 {
-  margin-bottom: 1rem; /* adds gap between title and paragraph */
+  margin-bottom: 1rem;
 }
-
 
 .title {
   font-size: 2.5rem;
@@ -118,155 +116,16 @@ footer {
 }
 
 .subpage-card .project-item {
-  text-align: left; /* force left alignment only for project content */
-  display: inline-block; /* ensures left alignment actually takes effect */
-  width: 90%; /* optional: keeps it nicely within card boundaries */
+  text-align: left;
+  display: inline-block;
+  width: 90%;
   margin: 0 auto 35px auto;
 }
 
 .subpage-card h1 {
   margin-bottom: 1.5rem;
-  text-align: center; /* keeps the title centered */
+  text-align: center;
 }
 
 .subpage-card p {
-  margin-bottom: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Ensure the projects area itself is a left-aligned block centered in the card */
-.projects-list {
-  width: 100%;
-  max-width: 520px;   /* controls the reading width of the project text */
-  margin: 0 auto 20px;/* centers the project list block inside the card */
-  text-align: center;   /* important: left-align text inside this block */
-  display: block;
-}
-
-/* Each project is a normal block that fills the projects-list width */
-.project-item {
-  display: block;
-  width: 100%;
-  margin-bottom: 35px; /* space between projects */
-}
-
-/* Title and paragraph left-aligned */
-.project-item h2 {
-  margin-bottom: 12px;
-  font-size: 1.3em;
-  text-align: left;
-}
-
-.project-item p {
-  line-height: 1.6;
-  text-align: left;
-  margin: 0; /* remove the small left indent if present */
-}
-
-/* BLOG */
-
-.blog-body {
-  background: #f9f9f9;
-  color: #222;
-  font-family: 'Georgia', serif;
-}
-
-.blog-container {
-  max-width: 800px;
-  margin: 80px auto;
-  padding: 0 20px;
-  line-height: 1.7;
-}
-
-.blog-entry {
-  margin-bottom: 3rem;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1.5rem;
-}
-
-.blog-entry h2 a {
-  color: #222;
-  text-decoration: none;
-}
-
-.blog-entry h2 a:hover {
-  text-decoration: underline;
-}
-
-.blog-date {
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* --- Blog page overrides --- */
-body.blog-body {
-  display: block !important;       /* remove flex centering */
-  height: auto !important;         /* let the page grow with content */
-  min-height: 100vh;
-  overflow-y: auto;                /* enable vertical scrolling */
-  margin: 0;
-  padding: 0;
-  color: #e0e0e0;
-}
-
-body.blog-body .blog-container {
-  margin-top: 80px;   /* optional: space from top of viewport */
-  margin-bottom: 80px; /* optional: space at bottom */
-}
-
-body.blog-body {
-  background: url("/images/space1.png") no-repeat center center fixed;
-  background-size: cover;
-}
-body.blog-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
-}
-
-/* --- Blog page visual effects (keep homepage style) --- */
-body.blog-body {
-  font-family: 'Inter', sans-serif;        /* restore homepage font */
-  color: #f5f5f5;                          /* restore homepage text color */
-  transition: all 0.3s ease;               /* subtle animation for hover/focus effects */
-}
-
-/* Optional: glow effect on blog container similar to homepage cards */
-body.blog-body .blog-container {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
-  border-radius: 20px;
-  padding: 2rem 3rem;
-  transition: all 0.3s ease;
-}
-
-/* Optional hover effect for blog container (like homepage card hover) */
-body.blog-body .blog-container:hover {
-  transform: translateY(-5px);
-}
-
-/* Text shadows for headings */
-body.blog-body .blog-container h1,
-body.blog-body .blog-container h2,
-body.blog-body .blog-container h3 {
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-}
-
-/* Links */
-body.blog-body .blog-container a {
-  color: #8ab4f8;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-body.blog-body .blog-container a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-
+  margin-bottom: 1
