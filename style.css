@@ -128,4 +128,90 @@ footer {
 }
 
 .subpage-card p {
-  margin-bottom: 1
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.projects-list {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 20px;
+  text-align: center;
+  display: block;
+}
+
+.project-item {
+  display: block;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.project-item h2 {
+  margin-bottom: 12px;
+  font-size: 1.3em;
+  text-align: left;
+}
+
+.project-item p {
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+}
+
+/* BLOG */
+
+.blog-body {
+  display: block !important;
+  height: auto !important;
+  min-height: 100vh;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  color: #e0e0e0;
+  background: url("/images/space1.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.blog-body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+/* Blog container style */
+body.blog-body .blog-container {
+  max-width: 800px;
+  margin: 80px auto;
+  background: rgba(20, 20, 30, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+/* Blog headings */
+body.blog-body .blog-container h1,
+body.blog-body .blog-container h2,
+body.blog-body .blog-container h3 {
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/* Blog links */
+body.blog-body .blog-container a {
+  color: #8ab4f8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+body.blog-body .blog-container a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
