@@ -16,6 +16,7 @@ And here’s some text with a [link](https://example.com).
 
 ## Modified TOV Equations :
 The following are the **modified TOV equations** in the $R + \alpha R^2$ theory :
+
 $$
 A' = \frac{2rA}{3+6\alpha R)}\left[8 \pi (\rho + 3p) + A(R + \alpha R^2) - (1 + 2 \alpha R)\times \left(\frac{A}{2}R + \frac{3\psi}{2r}\right) - \left(\frac{3}{r } + \frac{3\psi}{2}\right)2 \alpha R'\right]
 $$
