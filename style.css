@@ -1,19 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 
-/* ========== GLOBAL RESET ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-/* ========== MAIN LANDING PAGE ========== */
+/* === UNIVERSAL BACKGROUND OVERLAY === */
 body::before {
   content: "";
   position: fixed;
@@ -25,7 +18,8 @@ body::before {
   z-index: -1;
 }
 
-body {
+/* === HOME PAGE (index.html) === */
+body.home-body {
   height: 100vh;
   font-family: 'Inter', sans-serif;
   background: url("images/space1.png") no-repeat center center fixed;
@@ -37,7 +31,6 @@ body {
   color: #f5f5f5;
 }
 
-/* ---------- Card Layout ---------- */
 .container {
   display: flex;
   justify-content: center;
@@ -54,6 +47,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
+  max-width: 600px;
 }
 
 .card:hover {
@@ -108,98 +102,92 @@ footer {
   text-align: center;
 }
 
-/* ---------- Back Link ---------- */
-.back-link {
-  display: inline-block;
-  margin-top: 1.5rem;
-  color: #cfd8ff;
-  text-decoration: none;
-  transition: color 0.3s;
-  text-align: center;
+/* === SUBPAGES (projects.html, etc.) === */
+body.subpage-body {
+  font-family: 'Inter', sans-serif;
+  color: #e0e0e0;
+  background: url("images/space1.png") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  height: auto;
+  display: block;
+  overflow-y: auto;
 }
 
-.back-link:hover {
-  color: #ffffff;
+body.subpage-body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 
-/* ---------- Subpage Cards ---------- */
+.subpage-body .container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 80px auto;
+  padding: 40px 20px;
+  max-width: 1000px;
+}
+
 .subpage-card {
-  max-width: 600px;
   width: 90%;
-}
-
-.subpage-card .project-item {
+  max-width: 700px;
   text-align: left;
-  display: inline-block;
-  width: 90%;
-  margin: 0 auto 35px auto;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
 }
 
 .subpage-card h1 {
+  text-align: center;
   margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.subpage-card p {
-  margin-bottom: 1.2rem;
-  line-height: 1.6;
-}
-
-.projects-list {
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto 20px;
-  text-align: center;
-  display: block;
 }
 
 .project-item {
-  display: block;
-  width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 2rem;
 }
 
 .project-item h2 {
-  margin-bottom: 12px;
-  font-size: 1.3em;
-  text-align: left;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
 }
 
 .project-item p {
   line-height: 1.6;
-  text-align: left;
-  margin: 0;
 }
 
-/* ========== BLOG PAGE ========== */
+/* === BLOG PAGE === */
 body.blog-body {
   font-family: 'Inter', sans-serif;
   color: #e0e0e0;
-  background: url("/images/space1.png") no-repeat center center fixed;
+  background: url("images/space1.png") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
+  height: auto;
   display: block;
   overflow-y: auto;
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
 }
 
 body.blog-body::before {
   content: "";
   position: fixed;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.4);
   z-index: -1;
 }
 
-/* ---------- Blog Container ---------- */
 .blog-container {
   max-width: 800px;
-  margin: 40px auto 80px auto; /* Better top/bottom spacing */
+  margin: 80px auto;
   background: rgba(20, 20, 30, 0.75);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -209,14 +197,13 @@ body.blog-body::before {
   color: #e0e0e0;
 }
 
-/* ---------- Blog Typography ---------- */
 .blog-container h1,
 .blog-container h2,
 .blog-container h3 {
   color: #fff;
   margin-top: 20px;
   margin-bottom: 15px;
-  text-shadow: none; /* clean headings */
+  text-shadow: none;
 }
 
 .blog-container p {
@@ -232,7 +219,6 @@ body.blog-body::before {
   text-decoration: underline;
 }
 
-/* ---------- Blog Footer ---------- */
 .back-link {
   display: block;
   text-align: center;
@@ -250,61 +236,3 @@ footer {
   margin-top: 40px;
   font-size: 0.9rem;
 }
-
-/* Override layout for scrollable subpages (projects, about, contact, etc.) */
-body.subpage-body {
-  display: block;
-  height: auto;
-  min-height: 100vh;
-  overflow-y: auto;
-  background: url("/images/space1.png") no-repeat center center fixed;
-  background-size: cover;
-  color: #e0e0e0;
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-
-/* === PAGE LAYOUT OVERRIDES === */
-
-/* Home page: centered card */
-body.home-body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url("/images/space1.png") no-repeat center center fixed;
-  background-size: cover;
-  color: #f5f5f5;
-  font-family: 'Inter', sans-serif;
-}
-
-/* Subpages: scrollable, top-aligned */
-body.subpage-body,
-body.blog-body {
-  display: block;
-  min-height: 100vh;
-  height: auto;
-  overflow-y: auto;
-  background: url("/images/space1.png") no-repeat center center fixed;
-  background-size: cover;
-  color: #e0e0e0;
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* Subpage containers (Projects, Blog, etc.) */
-.subpage-body .container,
-.blog-body .blog-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 80px auto;
-  padding: 40px 20px;
-  max-width: 1200px;
-}
-
-
