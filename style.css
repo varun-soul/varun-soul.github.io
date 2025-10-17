@@ -250,3 +250,18 @@ footer {
   margin-top: 40px;
   font-size: 0.9rem;
 }
+
+/* Override layout for scrollable subpages (projects, about, contact, etc.) */
+body.subpage-body {
+  display: block;
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  background: url("/images/space1.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
