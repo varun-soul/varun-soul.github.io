@@ -236,3 +236,56 @@ footer {
   margin-top: 40px;
   font-size: 0.9rem;
 }
+
+/* === ABOUT PAGE LAYOUT === */
+body.subpage-body.about-page {
+  display: flex;
+  justify-content: center; /* horizontally center the container */
+  align-items: center;     /* vertically center the container */
+  min-height: 100vh;
+  padding: 0 20px;         /* small horizontal padding for small screens */
+}
+
+body.subpage-body.about-page .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+body.subpage-body.about-page .subpage-card {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;       /* center all text */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+body.subpage-body.about-page .subpage-card h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+body.subpage-body.about-page .subpage-card p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+body.subpage-body.about-page .back-link {
+  display: block;
+  margin-top: 30px;
+  color: #ccc;
+  text-align: center;
+}
+
+body.subpage-body.about-page .back-link:hover {
+  color: #fff;
+}
+
