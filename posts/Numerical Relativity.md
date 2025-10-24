@@ -1,70 +1,47 @@
-# Why split spacetime?
 
-We have often heard the term "4D space-time" in Einstein's Relativity. It describes the entire history of the universe, the past, present and future as a single, static object. 
+## Slicing spacetime :
 
-But that is not how we experience reality. We live in a 3D world and experience time (1D) linearly. It is quite natural for us to ask the question : "If I know the state of the universe right now, can I predict how it would look like in the future?".
+We have our space-time defined as a 4D manifold with a metric $(M, g _{ab})$. We want to slice it into 3D hypersurfaces which are (locally) level surfaces of a scalar function $t$ which acts like the **global time**.
+These slices will then be completely space-like.
 
-This is something known as the "Initial Value Problem" or the "Cauchy Problem" and this is precisely the problem that we aim to solve by performing a 3+1 decomposition of our space time.
+![[Pasted image 20251025021841.png]]
 
-This isn't just a mathematical exercise. Have you seen all those cool videos of two stars or two black holes merging? Thats the 3+1 formalism in action. Its the engine behind numerical relativity. So how does this engine work?
+## Unit normal vector :
 
-Before going into all that, I should probably tell you that the notation being followed is that of Baumgarte's book and can be found in section 2.1.
-
-# Slicing Space-time :
-
-We start out with a 4D spacetime, characterised by a manifold $M$ and the metric $g_{ab}$ . Casting Einstein's equations into a 3+1 form amounts to carving this spacetime up into a stack of 3D "spatial slices".
-
-This process is called **foliation**. We **foliate** spacetime into a family of 3D hypersurfaces, each of which must be space-like (meaning no  two points on it are causally connected). These hypersurfaces are defined as (at least locally) the level surfaces of a scalar function $t$, which then serves as our global time function.
-
-Now that we have a stack of slices, we need a mathematical way to describe the direction between the slices. This is done by defining our unit normal vector. We start out by defining the one-form :
-
+ We start out by defining the one-form :
 $$
 \Omega _{a} = \nabla _{a} t
 $$
+By definition, the above one-form is closed, i.e, $\nabla _{[a}\Omega _{b]} = 0$ . The metric allows us to compute the norm of this one-form :
+$$
+g^{ab} \Omega _{a} \Omega _{b} = \frac{1}{\alpha^2}
+$$
+Here $\alpha$ is something called the **lapse function** and it measures how much proper time elapses between neighbouring time slices. We always assume it to be positive such that our one-form is time-like.
 
-By definition, the above one-form is closed, i.e, $\nabla _{[a} \Omega _{b]} = 0$ . The metric allows us to compute the norm of this one-form which we write out as $\alpha^{-2}$. Here $\alpha$ is something called the **lapse function** and it measures how much proper time elapses between neighbouring time slices. We always assume it to be positive.
-
-The normalised one-form is given by $\omega _a = \alpha \Omega _a$ . Now we can define the unit normal to the slices as :
-
+The normalised one-form is given by $\omega_a = \alpha \Omega_a$ . Now we can define the **unit normal** to the slices as :
 $$
 n^a = -g^{ab}\omega _{b}
 $$
-
 The negative sign exists so that $n^a$ points in direction of increasing $t$. This can easily be checked by computing :
-
 $$
 n^a \nabla _{a} t > 0
 $$
+Since $\nabla _a t$ is the gradient and will always point in direction of increasing time, a positive inner product (dot product) with $n _a$ will mean that $n _a$ will also be pointing towards increasing time.
 
-Thus we have finally defined our **unit normal vector**. Now we would also like to have a way to measure distances between points on our 3D spatial slices. To do that we would like to find the metric induced on the hypersurface by the space-time metric $g_{ab}$ .
+## Spatial metric :
 
-Thus we construct the spatial metric $\gamma _{ab}$ which is defined as :
-
+We construct the spatial metric $\gamma_{ab}$ which is defined as :
 $$
 \gamma _{ab} = g _{ab} + n _{a} n _{b}
 $$
+The intuition behind this can be thought of as $g_{ab}$ calculating the spacetime distance while $n_{a} n_{b}$ kills off the time-like contribution.
 
-The intuition behind this can be thought of as $g_{ab}$ calculating the spacetime distance while $n _{a} n _{b}$ kills off the time-like contribution.
-
-So we have essentially finished our slicing of the space-time. But by no means are we done with the 3+1 formalism. We also need to decompose the tensors defined on our space-time manifold into a time-like and space-like part.
-
-The good thing is that we don't need to introduce anything extra. To convert some tensor $T _{ab}$ into its spatial part, we need to only contract its free indices using $\gamma _{c}^a$ as follows :
+The spatial metric as the name suggests is purely spatial. This can be seen by contracting it with the unit normal vector :
 
 $$
-\gamma^a _{c} \gamma _{d}^b \ T _{ab}
+n^a \gamma _{ab} = n^a g _{ab} + n^a n _{a} n _{b} = n _{b} - n _{b} = 0
 $$
 
-So the spatial projection operator is simply :
+## Decomposing Tensors :
 
-$$
-\gamma^a _{b} = \delta^a _{b} + n^a n _{b}
-$$
-
-Similarly, we can define the Normal or time-like projection operator as :
-
-$$
-N^a _{b} = -n^a n _{b} = \delta^a _{b} - \gamma^a _{b}
-$$
-
-We can now use these to project any tensor into its spatial or time-like components. 
 
