@@ -4,7 +4,8 @@
 We have our space-time defined as a 4D manifold with a metric $(M, g _{ab})$. We want to slice it into 3D hypersurfaces which are (locally) level surfaces of a scalar function $t$ which acts like the **global time**.
 These slices will then be completely space-like.
 
-![[Pasted image 20251025021841.png]]
+![My Image](/images/slices.png)
+
 
 ## Unit normal vector :
 
