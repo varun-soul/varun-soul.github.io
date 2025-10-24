@@ -15,49 +15,27 @@
     <footer>© 2025 Varun Naudiyal</footer>
   </div>
 
-  <!-- Load Showdown for Markdown conversion -->
+  <!-- Showdown for Markdown -->
   <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] },
+      chtml: { scale: 0.9 }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 
   <script>
-    // -------------------------------
-    // Load MathJax dynamically
-    // -------------------------------
-    function loadMathJax() {
-      if (window.MathJax && window.MathJax.typesetPromise)
-        return Promise.resolve(window.MathJax);
-
-      window.MathJax = {
-        tex: {
-          inlineMath: [['\\(', '\\)'], ['$', '$']],
-          displayMath: [['$$','$$'], ['\\[','\\]']]
-        },
-        options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] },
-        chtml: { scale: 0.9 }
-      };
-
-      return new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-        script.async = true;
-        script.onload = () => resolve(window.MathJax);
-        script.onerror = reject;
-        document.head.appendChild(script);
-      });
-    }
-
-    function typesetMath(element = document.body) {
-      return loadMathJax()
-        .then(() => window.MathJax.typesetPromise([element]))
-        .catch(err => console.error('MathJax error:', err));
-    }
-
-    // -------------------------------
-    // Load and render Markdown post
-    // -------------------------------
-    (function() {
+    // Load Markdown and render with Showdown, then typeset MathJax
+    (function () {
       const urlParams = new URLSearchParams(window.location.search);
-      const file = urlParams.get('file');
-      const container = document.getElementById('content');
+      const file = urlParams.get("file");
+      const container = document.getElementById("content");
 
       if (!file) {
         container.innerHTML = "<p>No file specified.</p>";
@@ -65,33 +43,38 @@
       }
 
       fetch(file)
-        .then(res => {
-          if (!res.ok) throw new Error('Failed to load ' + file);
+        .then((res) => {
+          if (!res.ok) throw new Error("Failed to load " + file);
           return res.text();
         })
-        .then(md => {
+        .then((md) => {
           const converter = new showdown.Converter({
             tables: true,
             ghCodeBlocks: true,
             simpleLineBreaks: true
           });
 
-          // Preserve math delimiters
-          converter.setOption('extensions', [() => ({
-            type: 'output',
-            filter: text => text.replace(/\\\$/g, '$')
-          })]);
+          // Prevent Showdown from escaping $ signs
+          converter.setOption("extensions", [
+            () => ({
+              type: "output",
+              filter: (text) => text.replace(/\\\$/g, "$")
+            }),
+          ]);
 
-          // Convert markdown to HTML
           container.innerHTML = converter.makeHtml(md);
 
-          // Clear old math (if navigating dynamically)
-          if (window.MathJax?.typesetClear) window.MathJax.typesetClear();
-
-          // Render MathJax after insertion
-          setTimeout(() => typesetMath(container), 50);
+          // Wait until MathJax is ready, then typeset
+          const checkMathJax = () => {
+            if (window.MathJax && window.MathJax.typesetPromise) {
+              window.MathJax.typesetPromise([container]);
+            } else {
+              setTimeout(checkMathJax, 100);
+            }
+          };
+          checkMathJax();
         })
-        .catch(err => {
+        .catch((err) => {
           container.innerHTML = "<p>Error loading post.</p>";
           console.error(err);
         });
