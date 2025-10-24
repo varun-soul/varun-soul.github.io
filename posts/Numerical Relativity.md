@@ -11,7 +11,7 @@ This is something known as the "Initial Value Problem" or the "Cauchy Problem" a
 
 This isn't just a mathematical exercise. Have you seen all those cool videos of two stars or two black holes merging? Thats the 3+1 formalism in action. Its the engine behind numerical relativity. So how does this engine work?
 
->Before going into all that, I should probably tell you that the notation being followed is that of Baumgarte's book and can be found in section 2.1.
+Before going into all that, I should probably tell you that the notation being followed is that of Baumgarte's book and can be found in section 2.1.
 
 # Slicing spacetime :
 
