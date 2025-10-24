@@ -5,26 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Post | Varun Naudiyal</title>
   <link rel="stylesheet" href="../style.css">
-
-  <!-- MathJax Configuration -->
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: true
-      },
-      svg: { fontCache: 'global' }
-    };
-  </script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
 </head>
 
 <body class="blog-body">
   <div class="blog-container" id="content">Loading...</div>
 
+  <!-- Back link + footer -->
   <div style="text-align: center; margin-top: 40px;">
     <a href="../blog.html" class="back-link">← Back to Blog</a>
     <footer>© 2025 Varun Naudiyal</footer>
@@ -33,12 +19,26 @@
   <!-- Showdown for Markdown -->
   <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 
-  <!-- Markdown Loader -->
+  <!-- MathJax -->
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async id="MathJax-script"
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <!-- Markdown + MathJax rendering -->
+  <script>
+    (function() {
       const urlParams = new URLSearchParams(window.location.search);
-      const file = urlParams.get("file");
-      const container = document.getElementById("content");
+      const file = urlParams.get('file');
+      const container = document.getElementById('content');
 
       if (!file) {
         container.innerHTML = "<p>No file specified.</p>";
@@ -46,23 +46,28 @@
       }
 
       fetch(file)
-        .then(response => response.text())
-        .then(markdown => {
+        .then(res => {
+          if (!res.ok) throw new Error('Failed to load ' + file);
+          return res.text();
+        })
+        .then(md => {
           const converter = new showdown.Converter({
             tables: true,
-            simplifiedAutoLink: true,
             ghCodeBlocks: true
           });
-          const html = converter.makeHtml(markdown);
+          const html = converter.makeHtml(md);
           container.innerHTML = html;
 
-          // Wait a tiny bit for HTML to render, then trigger MathJax
-          if (window.MathJax) {
-            setTimeout(() => {
-              MathJax.typesetPromise([container])
-                .then(() => console.log("MathJax rendered"))
-                .catch(err => console.error("MathJax render error:", err));
-            }, 100);
+          // Render MathJax
+          if (window.MathJax && window.MathJax.typesetPromise) {
+            window.MathJax.typesetPromise([container]);
           }
         })
-        .catch(error => {
+        .catch(err => {
+          container.innerHTML = "<p>Error loading post.</p>";
+          console.error(err);
+        });
+    })();
+  </script>
+</body>
+</html>
