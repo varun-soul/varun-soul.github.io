@@ -5,6 +5,8 @@ $$
 A' = \frac{2rA}{3+6\alpha R)}\left[8 \pi (\rho + 3p) + A(R + \alpha R^2) - (1 + 2 \alpha R)\times \left(\frac{A}{2}R + \frac{3\psi}{2r}\right) - \left(\frac{3}{r } + \frac{3\psi}{2}\right)2 \alpha R'\right]
 $$
 
+helloo
+ 
 $$
 \psi' = \frac{\psi}{2} \left(\frac{A'}{A} - \psi\right) + \frac{2A'}{rA} + \frac{2}{1 + 2 \alpha R}\left[- 8 \pi Ap + \left(\frac{\psi}{2} + \frac{2}{r}\right)2\alpha R' - \frac{A}{2}(R + \alpha R^2)\right]
 $$
