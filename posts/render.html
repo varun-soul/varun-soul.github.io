@@ -10,6 +10,7 @@
 <body class="blog-body">
   <div class="blog-container" id="content">Loading...</div>
 
+  <!-- Back link + footer -->
   <div style="text-align: center; margin-top: 40px;">
     <a href="../blog.html" class="back-link">← Back to Blog</a>
     <footer>© 2025 Varun Naudiyal</footer>
@@ -17,6 +18,7 @@
 
   <!-- Showdown for Markdown -->
   <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+
   <!-- MathJax -->
   <script>
     window.MathJax = {
@@ -24,18 +26,19 @@
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']]
       },
-      options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] },
-      chtml: { scale: 0.9 }
+      svg: { fontCache: 'global' }
     };
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+  <script async id="MathJax-script"
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 
+  <!-- Markdown + MathJax rendering -->
   <script>
-    // Load Markdown and render with Showdown, then typeset MathJax
-    (function () {
+    (function() {
       const urlParams = new URLSearchParams(window.location.search);
-      const file = urlParams.get("file");
-      const container = document.getElementById("content");
+      const file = urlParams.get('file');
+      const container = document.getElementById('content');
 
       if (!file) {
         container.innerHTML = "<p>No file specified.</p>";
@@ -43,38 +46,24 @@
       }
 
       fetch(file)
-        .then((res) => {
-          if (!res.ok) throw new Error("Failed to load " + file);
+        .then(res => {
+          if (!res.ok) throw new Error('Failed to load ' + file);
           return res.text();
         })
-        .then((md) => {
+        .then(md => {
           const converter = new showdown.Converter({
             tables: true,
-            ghCodeBlocks: true,
-            simpleLineBreaks: true
+            ghCodeBlocks: true
           });
+          const html = converter.makeHtml(md);
+          container.innerHTML = html;
 
-          // Prevent Showdown from escaping $ signs
-          converter.setOption("extensions", [
-            () => ({
-              type: "output",
-              filter: (text) => text.replace(/\\\$/g, "$")
-            }),
-          ]);
-
-          container.innerHTML = converter.makeHtml(md);
-
-          // Wait until MathJax is ready, then typeset
-          const checkMathJax = () => {
-            if (window.MathJax && window.MathJax.typesetPromise) {
-              window.MathJax.typesetPromise([container]);
-            } else {
-              setTimeout(checkMathJax, 100);
-            }
-          };
-          checkMathJax();
+          // Render MathJax
+          if (window.MathJax && window.MathJax.typesetPromise) {
+            window.MathJax.typesetPromise([container]);
+          }
         })
-        .catch((err) => {
+        .catch(err => {
           container.innerHTML = "<p>Error loading post.</p>";
           console.error(err);
         });
