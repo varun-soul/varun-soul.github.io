@@ -10,6 +10,8 @@ This isn't just a mathematical exercise. Have you seen all those cool videos of 
 
 Before going into all that, I should probably tell you that the notation being followed is that of Baumgarte's book and can be found in section 2.1.
 
+# Slicing Space-time :
+
 We start out with a 4D spacetime, characterised by a manifold $M$ and the metric $g_{ab}$ . Casting Einstein's equations into a 3+1 form amounts to carving this spacetime up into a stack of 3D "spatial slices".
 
 This process is called **foliation**. We **foliate** spacetime into a family of 3D hypersurfaces, each of which must be space-like (meaning no  two points on it are causally connected). These hypersurfaces are defined as (at least locally) the level surfaces of a scalar function $t$, which then serves as our global time function.
