@@ -45,7 +45,7 @@ $$
 \gamma _{ab} = g _{ab} + n _{a} n _{b}
 $$
 
-The intuition behind this can be thought of as $g_{ab}$ calculating the spacetime distance while $n_{a} n_{b}$ kills off the time-like contribution.
+The intuition behind this can be thought of as $g _{ab}$ calculating the spacetime distance while $n _{a} n _{b}$ kills off the time-like contribution.
 
 The spatial metric as the name suggests is purely spatial. This can be seen by contracting it with the unit normal vector :
 
