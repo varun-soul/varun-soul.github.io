@@ -26,7 +26,7 @@ $$
 
 Here $\alpha$ is something called the **lapse function** and it measures how much proper time elapses between neighbouring time slices. We always assume it to be positive such that our one-form is time-like.
 
-The normalised one-form is given by $\omega_a = \alpha \Omega_a$ . Now we can define the **unit normal** to the slices as :
+The normalised one-form is given by $\omega _a = \alpha \Omega _a$ . Now we can define the **unit normal** to the slices as :
 
 $$
 n^a = -g^{ab}\omega _{b}
