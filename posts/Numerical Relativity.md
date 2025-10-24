@@ -18,31 +18,23 @@ This process is called **foliation**. We **foliate** spacetime into a family of 
 
 Now that we have a stack of slices, we need a mathematical way to describe the direction between the slices. This is done by defining our unit normal vector. We start out by defining the one-form :
 
-$$
-\Omega_{a} = \nabla_{a} t
-$$
+$$\Omega_{a} = \nabla_{a} t$$
 
-By definition, the above one-form is closed, i.e, $\nabla_{[a}\Omega_{b]} = 0$ . The metric allows us to compute the norm of this one-form which we write out as $\alpha^{-2}$. Here $\alpha$ is something called the **lapse function** and it measures how much proper time elapses between neighbouring time slices. We always assume it to be positive.
+By definition, the above one-form is closed, i.e, $\nabla_{[a} \Omega_{b]} = 0$ . The metric allows us to compute the norm of this one-form which we write out as $\alpha^{-2}$. Here $\alpha$ is something called the **lapse function** and it measures how much proper time elapses between neighbouring time slices. We always assume it to be positive.
 
 The normalised one-form is given by $\omega_a = \alpha \Omega_a$ . Now we can define the unit normal to the slices as :
 
-$$
-n^a = -g^{ab}\omega _{b}
-$$
+$$n^a = -g^{ab}\omega _{b}$$
 
 The negative sign exists so that $n^a$ points in direction of increasing $t$. This can easily be checked by computing :
 
-$$
-n^a \nabla_{a} t > 0
-$$
+$$n^a \nabla_{a} t > 0$$
 
 Thus we have finally defined our **unit normal vector**. Now we would also like to have a way to measure distances between points on our 3D spatial slices. To do that we would like to find the metric induced on the hypersurface by the space-time metric $g_{ab}$ .
 
 Thus we construct the spatial metric $\gamma_{ab}$ which is defined as :
 
-$$
-\gamma_{ab} = g_{ab} + n_{a} n_{b}
-$$
+$$\gamma_{ab} = g_{ab} + n_{a} n_{b}$$
 
 The intuition behind this can be thought of as $g_{ab}$ calculating the spacetime distance while $n_{a} n_{b}$ kills off the time-like contribution.
 
@@ -50,21 +42,15 @@ So we have essentially finished our slicing of the space-time. But by no means a
 
 The good thing is that we don't need to introduce anything extra. To convert some tensor $T_{ab}$ into its spatial part, we need to only contract its free indices using $\gamma_{c}^a$ as follows :
 
-$$
-\gamma^a_{c} \gamma_{d}^b \ T_{ab}
-$$
+$$\gamma^a_{c} \gamma_{d}^b \ T_{ab}$$
 
 So the spatial projection operator is simply :
 
-$$
-\gamma^a_{b} = \delta^a_{b} + n^a n_{b}
-$$
+$$\gamma^a_{b} = \delta^a_{b} + n^a n_{b}$$
 
 Similarly, we can define the Normal or time-like projection operator as :
 
-$$
-N^a_{b} = -n^a n_{b} = \delta^a_{b} - \gamma^a_{b}
-$$
+$$N^a_{b} = -n^a n_{b} = \delta^a_{b} - \gamma^a_{b}$$
 
 We can now use these to project any tensor into its spatial or time-like components. 
 
