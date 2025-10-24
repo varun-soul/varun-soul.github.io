@@ -1,5 +1,7 @@
 # Why split spacetime?
+
 _________________________________________________________________________________
+
 
 We have often heard the term "4D space-time" in Einstein's Relativity. It describes the entire history of the universe, the past, present and future as a single, static object. 
 
