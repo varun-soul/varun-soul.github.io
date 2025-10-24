@@ -17,7 +17,7 @@ This process is called **foliation**. We **foliate** spacetime into a family of 
 Now that we have a stack of slices, we need a mathematical way to describe the direction between the slices. This is done by defining our unit normal vector. We start out by defining the one-form :
 
 $$
-\Omega_{a} = \nabla_{a} t
+\Omega _{a} = \nabla _{a} t
 $$
 
 By definition, the above one-form is closed, i.e, $\nabla_{[a} \Omega_{b]} = 0$ . The metric allows us to compute the norm of this one-form which we write out as $\alpha^{-2}$. Here $\alpha$ is something called the **lapse function** and it measures how much proper time elapses between neighbouring time slices. We always assume it to be positive.
