@@ -8,7 +8,9 @@ Imagine yourself as an explorer standing at the **North Pole**, arm stretched ou
 
 Once at the equator, you enjoy the warmth and begin walking **along** it, still keeping your arm pointed the same way (you must have incredibly strong arms). Eventually, you decide to return to the **North Pole**. After a long and tiring journey, you arrive — only to be stunned. Even though you never deliberately changed the direction of your arm, it’s now pointing somewhere completely different from where you started.
 
-![[Pasted image 20251025105338.png]]
+<center>
+![My Image](/images/conn_draw.png)
+</center>
 
 Somehow, the **intrinsic curvature of the Earth** itself has altered your arm’s orientation. Your arm, which was a stand-in for a vector has changed its directions as it was transported parallel to itself across a curved space. 
 
