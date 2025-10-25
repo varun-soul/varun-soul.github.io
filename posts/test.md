@@ -1,6 +1,7 @@
 ## Modified TOV Equations :
 The following are the **modified TOV equations** in the $R + \alpha R^2$ theory :
-
+<div>
+\[
 \begin{align}
 A' &= \frac{2rA}{3 + 6\alpha R} \Bigg[
     8\pi (\rho + 3p)
@@ -11,7 +12,8 @@ A' &= \frac{2rA}{3 + 6\alpha R} \Bigg[
       2\alpha R'
 \Bigg]
 \end{align}
-
+\]
+</div>
 
 >helloo
 
