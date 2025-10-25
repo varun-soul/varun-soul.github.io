@@ -7,7 +7,11 @@ $$
 
 >helloo
 
-$E = mc^2$ is awesome
+\begin{equation}
+E = mc^2
+\end{equation}
+
+is awesome
  
 $$
 \psi' = \frac{\psi}{2} \left(\frac{A'}{A} - \psi\right) + \frac{2A'}{rA} + \frac{2}{1 + 2 \alpha R}\left[- 8 \pi Ap + \left(\frac{\psi}{2} + \frac{2}{r}\right)2\alpha R' - \frac{A}{2}(R + \alpha R^2)\right]
