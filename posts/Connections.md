@@ -2,7 +2,7 @@
 
 During my General Relativity classes this semester, one of the topics that I noticed people were confused by was the idea of a "connection" or "christoffel symbols". So I decided to write this short post hoping to clear up any confusion that might occur in to those who come behind us :3
 
-## A though experiment :
+## A thought experiment :
 
 We live on a giant curved ball hurtling through space at thousands of miles per hour. An absurd notion — yet true. Still, in our everyday lives, none of this really matters. When we walk from one street to another, we treat the Earth as flat, and for such small journeys, that’s perfectly fine. But as we zoom out and look at the bigger picture, the truth of our curved world becomes impossible to ignore.
 
