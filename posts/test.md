@@ -21,6 +21,8 @@ E = mc^2
 
 is awesome
  
+<div>
+\[
 \begin{align}
 \psi' &= \frac{\psi}{2}\left(\frac{A'}{A} - \psi\right)
       + \frac{2A'}{rA} \nonumber \\
@@ -30,6 +32,9 @@ is awesome
           - \frac{A}{2}(R + \alpha R^2)
       \Bigg]
 \end{align}
+\]
+</div>
+
 
 
 $$
