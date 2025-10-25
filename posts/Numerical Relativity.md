@@ -14,9 +14,9 @@ These slices will then be completely space-like.
 
 We start out by defining the one-form :
 
-$$
+\begin{equation}
 \Omega _{a} = \nabla _{a} t
-$$
+\end{equation}
 
 By definition, the above one-form is closed, i.e, $\nabla _{[a}\Omega _{b]} = 0$ . The metric allows us to compute the norm of this one-form :
 
