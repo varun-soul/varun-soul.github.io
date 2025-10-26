@@ -59,8 +59,6 @@ $$
 
 As is evident, the last term is quite problematic because we have no idea how to solve for it. But what we do know is that the result will always be a vector field. So we define this vector field as :
 
-$$
-\nabla _{\partial _{j}} \partial _{i} = \Gamma^m_{ij} \ \partial_{m}
-$$
+$$\nabla _{\partial _{j}} \partial _{i} = \Gamma^m_{ij} \ \partial_{m}$$
 
 
