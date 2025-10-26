@@ -17,3 +17,22 @@ Once at the equator, you enjoy the warmth and begin walking **along** it, still 
 Somehow, the **intrinsic curvature of the Earth** itself has altered your arm’s orientation. Your arm, which was a stand-in for a vector has changed its directions as it was transported parallel to itself across a curved space. 
 
 This is exactly what a **connection** encodes. The **connection** is defined as a set of rules for defining how a vector changes as you move it from one point to another. It defines how two tangent spaces are "connected" to each other. In fact, defining a connection on a manifold is akin to giving shape to it.
+
+## Covariant Derivative :
+
+Now it is time to look at the mathematical machinery behind a connection and we thus arrive at something known as the covariant derivative. The **connection** and **covariant derivative** are essentially two sides of the same coin. The connection is the set of rules and the covariant derivative is what you do with those set of rules.
+
+It essentially tells us how some vector / tensor field  would change if we transport it an infinitesimal distance along some other vector field. It is a generalised directional derivative operator for vector and tensor fields.  
+
+Why fields? Well vectors  and tensors are objects defined at  a point and if you are trying to take a directional derivative of some quantity, it is required for it to be defined at more than one point :3
+
+Formally, we define a covariant derivative as follows :
+
+The covariant derivative $\nabla$ on a smooth manifold $M$ is a map that takes a pair consisting of a vector field $X$ and a $(r,s)$ tensor field $T$ and sends them to another $(r,s)$ tensor field $\nabla _{X} T$. It satisfies the following properties, where $f$ is a scalar field, $X$ is a vector field and $T$ and $S$ are $(r,s)$ tensor fields :
+
+1.  **Action on Scalar** : $\nabla _{X} f =  X(f)$
+2. $\nabla _X(T+S) = \nabla _{X} T + \nabla _{X}S$ 
+3. **Leibniz Rule** :  $\nabla _X (T  \otimes S) = \nabla _X T \otimes S + T \otimes \nabla _X S$
+4. **f-linearity in vector field** : $\nabla _{f \cdot X + Y} T = f \cdot \nabla _X T + \nabla _Y T$
+
+Do note that it is not necessary that $X$ be a vector field. It can just be a vector and in that case your result will only be defined at that point.
