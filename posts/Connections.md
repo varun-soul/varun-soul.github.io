@@ -39,5 +39,15 @@ The covariant derivative $\nabla$ on a smooth manifold $M$ is a map that takes a
 
 </div>
 
+<div class="nice-list">
+  <ol>
+    <li><strong>Action on Scalar</strong> : $ \nabla _{X} f =  X(f) $</li>
+    <li>$ \nabla _X(T+S) = \nabla _{X} T + \nabla _{X}S $</li>
+    <li><strong>Leibniz Rule</strong> : $ \nabla _X (T  \otimes S) = \nabla _X T \otimes S + T \otimes \nabla _X S $</li>
+    <li><strong>f-linearity in vector field</strong> : $ \nabla _{f \cdot X + Y} T = f \cdot \nabla _X T + \nabla _Y T $</li>
+  </ol>
+</div>
+
+
 <br>
 Do note that it is not necessary that $X$ be a vector field. It can just be a vector and in that case your result will only be defined at that point.
