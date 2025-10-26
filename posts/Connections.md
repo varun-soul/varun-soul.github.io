@@ -71,7 +71,7 @@ $$
 We can write this in a simpler fashion by renaming some of the summed-over indices :
 
 $$
-\bigg[X(Y^i) + X^kY^j \Gamma^i_{jk} \bigg] \partial_{i}
+\bigg[X(Y^i) + X^kY^j \Gamma^i _{jk} \bigg] \partial _{i}
 $$
 
 Those confused by the first term in the above expression, since $Y^i$ is a scalar field, you can expand the term and get back our old expression :3
