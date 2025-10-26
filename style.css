@@ -289,3 +289,14 @@ body.subpage-body.about-page .back-link:hover {
   color: #fff;
 }
 
+.nice-list ol {
+  margin-left: 2rem;
+  padding-left: 1rem;
+  line-height: 1.7;
+}
+
+.nice-list li {
+  margin-bottom: 0.6rem;
+}
+
+
