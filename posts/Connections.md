@@ -30,10 +30,8 @@ Formally, we define a covariant derivative as follows :
 
 The covariant derivative $\nabla$ on a smooth manifold $M$ is a map that takes a pair consisting of a vector field $X$ and a $(r,s)$ tensor field $T$ and sends them to another $(r,s)$ tensor field $\nabla _{X} T$. It satisfies the following properties, where $f$ is a scalar field, $X$ is a vector field and $T$ and $S$ are $(r,s)$ tensor fields :
   
-- **Action on Scalar** : $\nabla _{X} f =  X(f)$
-- $\nabla _X(T+S) = \nabla _{X} T + \nabla _{X}S$
-- **Leibniz Rule** :  $\nabla _X (T  \otimes S) = \nabla _X T \otimes S + T \otimes \nabla _X S$
-- **f-linearity in vector field** : $\nabla _{f \cdot X + Y} T = f \cdot \nabla _X T + \nabla _Y T$
+1. **Action on Scalar** : $\nabla _{X} f =  X(f)$
+
 
 <br>
 Do note that it is not necessary that $X$ be a vector field. It can just be a vector and in that case your result will only be defined at that point.
