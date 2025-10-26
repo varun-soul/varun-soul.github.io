@@ -50,10 +50,13 @@ Consider the vector fields $X = X^j \partial _{j}$ and $Y = Y^i \partial _i$ whe
 $$
 \nabla _{X} Y = \nabla _{(X^j \partial_{j})} \ (Y^i \partial _{i}) = X^j \nabla _{\partial _{j}} (Y^i \partial_{i})
 $$
+
 Applying the chain rule, we end up with:
+
 $$
 X^j \bigg[(\nabla _{\partial _{j}} Y^i) \partial _{i} + Y^i (\nabla _{\partial _{j}} \partial _{i} )\bigg]
 $$
+
 As is evident, the last term is quite problematic because we have no idea how to solve for it. But what we do know is that the result will always be a vector field. So we define this vector field as :
 
 $$
