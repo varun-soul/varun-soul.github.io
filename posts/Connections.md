@@ -42,7 +42,6 @@ The covariant derivative $\nabla$ on a smooth manifold $M$ is a map that takes a
 Do note that it is not necessary that $X$ be a vector field. It can just be a vector and in that case your result will only be defined at that point.
 
 ## Christoffel Symbols :
-
 I may have defined a covariant derivative, but till now its just fancy symbols. I haven't really talked about how a covariant derivative looks like in action and that is exactly what we'll look at now.
 
 Consider the vector fields $X = X^j \partial _{j}$ and $Y = Y^i \partial _i$ where $X^j$ and $Y^i$ are the components and $\partial _j$ and $\partial _i$ are the basis vectors. Now we will begin by computing $\nabla _X Y$ :
@@ -57,8 +56,37 @@ $$
 X^j \bigg[(\nabla _{\partial _{j}} Y^i) \partial _{i} + Y^i (\nabla _{\partial _{j}} \partial _{i} )\bigg]
 $$
 
-As is evident, the last term is quite problematic because we have no idea how to solve for it. But what we do know is that the result will always be a vector field. So we define this vector field as :
+As is evident, the last term is quite problematic because we have no idea how to solve for it. But what we do know is that the result will always be a vector field. This motivates us to express this covariant derivative in terms of the basis vectors themselves, where we introduce a new set of functions $\Gamma^m _{ij}$ :
 
-$$\nabla _{\partial _{j}} \partial _{i} = \Gamma^m _{ij} \ \partial _{m}$$
+$$
+\nabla _{\partial _{j}} \partial _{i} = \Gamma^m _{ij} \ \partial _{m}
+$$
 
+Substituting the above into our previous equations gives us :
+
+$$
+X^j \bigg[(\partial _{j} Y^i) \partial _{i} + (Y^i \Gamma^m _{ij}) \partial _{m}\bigg]
+$$
+
+We can write this in a simpler fashion by renaming some of the summed-over indices :
+
+$$
+\bigg[X(Y^i) + X^kY^j \Gamma^i_{jk} \bigg] \partial_{i}
+$$
+
+Those confused by the first term in the above expression, since $Y^i$ is a scalar field, you can expand the term and get back our old expression :3
+
+So in the end we have :
+
+$$
+(\nabla _{X} Y)^i = X(Y^i) + X^kY^j \Gamma^i _{jk} 
+$$
+
+Now its time to address the elephant in the room... $\Gamma ^i _{jk}$ . 
+
+These components are called the **connection coefficient functions** of the connection and they capture how a basis vector $j$ changes along $k$ in the $i^{th}$ direction. 
+
+And if they look familiar, then yes these are intimately related with the **christoffel symbols** we use in General Relativity. In fact, the christoffel symbols are the connection coefficient functions of a particular type of connection, known as the **Levi-Civita Connection**.  What we're discussing here, however, is a much more general notion of a connection that isn't necessarily tied to any particular metric.
+
+It’s crucial to remember that these connection coefficients are **coordinate-dependent** quantities. Their values depend on the coordinate system we choose, and their presence doesn’t necessarily mean that the manifold itself is curved. For example, we can describe flat Euclidean space using spherical coordinates, a coordinate system where the basis vectors change from point to point. In that case, the connection coefficients will be nonzero even though the underlying space is perfectly flat. 
 
