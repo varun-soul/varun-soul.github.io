@@ -40,3 +40,24 @@ The covariant derivative $\nabla$ on a smooth manifold $M$ is a map that takes a
 </div>
 
 Do note that it is not necessary that $X$ be a vector field. It can just be a vector and in that case your result will only be defined at that point.
+
+## Christoffel Symbols :
+
+I may have defined a covariant derivative, but till now its just fancy symbols. I haven't really talked about how a covariant derivative looks like in action and that is exactly what we'll look at now.
+
+Consider the vector fields $X = X^j \partial _{j}$ and $Y = Y^i \partial _i$ where $X^j$ and $Y^i$ are the components and $\partial _j$ and $\partial _i$ are the basis vectors. Now we will begin by computing $\nabla _X Y$ :
+
+$$
+\nabla _{X} Y = \nabla _{(X^j \partial_{j})} \ (Y^i \partial _{i}) = X^j \nabla _{\partial _{j}} (Y^i \partial_{i})
+$$
+Applying the chain rule, we end up with:
+$$
+X^j \bigg[(\nabla _{\partial _{j}} Y^i) \partial _{i} + Y^i (\nabla _{\partial _{j}} \partial _{i} )\bigg]
+$$
+As is evident, the last term is quite problematic because we have no idea how to solve for it. But what we do know is that the result will always be a vector field. So we define this vector field as :
+
+$$
+\nabla _{\partial _{j}} \partial _{i} = \Gamma^m_{ij} \ \partial_{m}
+$$
+
+
