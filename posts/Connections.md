@@ -39,5 +39,4 @@ The covariant derivative $\nabla$ on a smooth manifold $M$ is a map that takes a
   </ol>
 </div>
 
-<br>
 Do note that it is not necessary that $X$ be a vector field. It can just be a vector and in that case your result will only be defined at that point.
