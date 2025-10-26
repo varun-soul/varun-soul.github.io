@@ -35,4 +35,5 @@ The covariant derivative $\nabla$ on a smooth manifold $M$ is a map that takes a
   3. **Leibniz Rule** :  $\nabla _X (T  \otimes S) = \nabla _X T \otimes S + T \otimes \nabla _X S$
   4. **f-linearity in vector field** : $\nabla _{f \cdot X + Y} T = f \cdot \nabla _X T + \nabla _Y T$
 
+<br>
 Do note that it is not necessary that $X$ be a vector field. It can just be a vector and in that case your result will only be defined at that point.
