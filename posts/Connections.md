@@ -90,3 +90,12 @@ And if they look familiar, then yes these are intimately related with the **chri
 
 It’s crucial to remember that these connection coefficients are **coordinate-dependent** quantities. Their values depend on the coordinate system we choose, and their presence doesn’t necessarily mean that the manifold itself is curved. For example, we can describe flat Euclidean space using spherical coordinates, a coordinate system where the basis vectors change from point to point. In that case, the connection coefficients will be nonzero even though the underlying space is perfectly flat. 
 
+## Connections are NOT Tensors!
+
+It’s easy to mistake the **connection coefficients** for a tensor — after all, with all their indices, they certainly look like one. But the truth becomes clear when you try applying a **coordinate transformation** to the connection itself. 
+
+I’m not showing the full derivation here (since the LaTeX doesn’t render well), but it’s worth working it out yourself. You’ll quickly find that the transformation law doesn’t follow the tensorial form.
+
+$$
+\Gamma^i _{jk \ (y)} = \frac{\partial y^i \partial^2x^q}{\partial x^q \partial y^k\partial y^j} + \frac{\partial y^i}{\partial x^q} \frac{\partial x^s}{\partial y^k} \frac{\partial x^p}{\partial y^j} \Gamma^q _{ps \ (x)}
+$$
