@@ -129,7 +129,9 @@ Extension to other types of tensors is quite obvious.
 ### 3D connection :
 We can create a 3D Levi-Civita connection the same way we do normally, except this time we replace the metric with our spatial metric.
 
-$$\Gamma^a _{bc} = \frac{1}{2}\gamma^{ad}(\partial_c\gamma _{db} + \partial _b\gamma _{dc} - \partial _d\gamma _{bc})$$
+$$
+\Gamma^a _{bc} = \frac{1}{2}\gamma^{ad}(\partial _c\gamma _{db} + \partial _b\gamma _{dc} - \partial _d\gamma _{bc})
+$$
 
 ### 3D Riemann Tensor
 We can define the 3D Riemann Tensor in the same as we did for 4 dimensions, except this time we use the 3D covariant derivative in its definition :
