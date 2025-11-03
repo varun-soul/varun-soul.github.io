@@ -1,6 +1,6 @@
 # An Intuitive Intro to Connections :3
 
-During my General Relativity classes this semester, one of the topics that I noticed people were confused by was the idea of a "connection" or "christoffel symbols". So I decided to write this short post hoping to clear up any confusion that might occur in to those who come behind us :3
+During my General Relativity classes this semester, one of the topics that I noticed people were confused by was the idea of a "connection" or "christoffel symbols". Most of the confusion was due to the introduction of the "Levi-Civita Connection" without actually talking about what a connection was. So I decided to write this short post hoping to clear up any confusionthat might have arisen :3
 
 ## A thought experiment :
 
