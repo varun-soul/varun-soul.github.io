@@ -1,4 +1,7 @@
+# **Killing fields :**
+
 I know — it sounds pretty barbaric, right? The name might conjure up images of blood and destruction, but for us, a *Killing field* is quite the opposite. It’s not a destroyer, but a preserver. Before we get into what that means, let’s first get some of the pesky prerequisites out of the way.
+
 ## Self-Diffeomorphisms :
 
 Consider two manifolds $M$ and $N$, with a smooth map $\phi$ between them. A **diffeomorphism** is a map $\phi$ that has an inverse which is also smooth. 
@@ -13,11 +16,13 @@ It’s a smooth, invertible deformation that keeps the manifold’s structure in
 
 Consider the following example:
 
-![[Pasted image 20251104030519.png]]
+<img width="1019" height="480" alt="image" src="https://github.com/user-attachments/assets/adfc3ad8-69da-452c-ae19-1fe110c2edc6" />
+
 
 We have a representative flat surface as our manifold $M$. A diffeomorphism to itself preserves its structure *but* shifts the points on the manifold. The plane has been reshaped without tearing, gluing or adding anything new. 
 
 Another example would be a 2-sphere (spherical surface). A rotation of the 2-sphere is also considered a self-diffeomorphism. All the points on that manifold are smoothly shifted under its action.
+
 ## Comparing Tensors using Diffeomorphisms:
 
 
