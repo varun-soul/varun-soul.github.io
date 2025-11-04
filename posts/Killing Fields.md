@@ -16,8 +16,9 @@ It’s a smooth, invertible deformation that keeps the manifold’s structure in
 
 Consider the following example:
 
-<img width="1019" height="480" alt="image" src="https://github.com/user-attachments/assets/adfc3ad8-69da-452c-ae19-1fe110c2edc6" />
-
+<center>
+![My Image](/images/selfdiff.png)
+</center>
 
 We have a representative flat surface as our manifold $M$. A diffeomorphism to itself preserves its structure *but* shifts the points on the manifold. The plane has been reshaped without tearing, gluing or adding anything new. 
 
