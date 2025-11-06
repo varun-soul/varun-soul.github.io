@@ -47,7 +47,7 @@ I may have defined a covariant derivative, but till now its just fancy symbols. 
 Consider the vector fields $X = X^j \partial _{j}$ and $Y = Y^i \partial _i$ where $X^j$ and $Y^i$ are the components and $\partial _j$ and $\partial _i$ are the basis vectors. Now we will begin by computing $\nabla _X Y$ :
 
 $$
-\nabla _{X} Y = \nabla_{(X^j \partial_{j})} \ (Y^i \partial _{i}) = X^j \nabla _{\partial _{j}} (Y^i \partial_{i})
+\nabla _{X} Y = \nabla _{(X^j \partial _{j})} \ (Y^i \partial _{i}) = X^j \nabla _{\partial _{j}} (Y^i \partial _{i})
 $$
 
 Applying the chain rule, we end up with:
