@@ -106,12 +106,12 @@ Think of a spherical surface and the surface of a potato. Surprisingly, these tw
 
 A key advantage of diffeomorphisms is that we can now pull back something that we had previously pushed forward. Since $\phi$ is invertible and its inverse is also smooth, the operations of pushing and pulling become reversible.
 
-If we take the diffeomorphism $\phi : M \to N$, and push a vector on $M$ forward to $N$ using $\phi _*$, we can then pull it back using the inverse map $(\phi^{-1}) ^*$. The same reasoning applies to covectors as well.
+If we take the diffeomorphism $\phi : M \to N$, and push a vector on $M$ forward to $N$ using $\phi _ * $, we can then pull it back using the inverse map $(\phi^{-1}) ^* $. The same reasoning applies to covectors as well.
 
 Most importantly, diffeomorphisms allow us to handle **mixed-rank tensors** consistently. The pushforward of a tensor $T$ of rank $(r, s)$ is now well-defined and given by:
 
 $$
-\phi _* T(\omega_{(1)}, \ldots, \omega _{(r)}, V^{(1)}, \ldots, V^{(s)})
+\phi _ * T(\omega_{(1)}, \ldots, \omega _{(r)}, V^{(1)}, \ldots, V^{(s)})
 = T\big( \phi ^* \omega _{(1)}, \ldots, \phi ^* \omega _{(r)}, \phi _*^{-1} V^{(1)}, \ldots, \phi _*^{-1} V^{(s)} \big)
 $$
 
