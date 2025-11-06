@@ -47,10 +47,10 @@ Here $\mu$ ranges over the dimensions of $N$, and $\nu$ ranges over those of $M$
 Opposite to pushforwards, we have the concept of the **pullback**. You might imagine it as the reverse process and that’s partially correct. A pullback takes a covector from the target manifold of the smooth map $\phi$ and pulls it back to the domain manifold. It is defined as:
 
 $$
-\phi ^* : T^*N \to T^*M \ \implies \omega \to \phi ^*(\omega)
+\phi ^* : T^ *N \to T^ *M \ \implies \omega \to \phi ^ *(\omega)
 $$
 
-The pullback $\phi ^*(\omega)$ acts on a vector $X \in TM$ as follows:
+The pullback $\phi ^ * (\omega)$ acts on a vector $X \in TM$ as follows:
 
 $$
 \phi ^* (\omega)(X) = \omega(\phi _*(X))
@@ -75,19 +75,19 @@ In general, an object that has been pushed forward cannot be pulled back using t
 For instance, consider a $(0, k)$ covariant tensor $T$ that maps $k$ vectors to a real number. Its pullback is defined as:
 
 $$
-\phi ^*T(V^{(1)}, \dots, V^{(k)}) = T(\phi _*V^{(1)}, \dots, \phi _*V^{(k)})
+\phi ^ * T(V^{(1)}, \dots, V^{(k)}) = T(\phi _ * V^{(1)}, \dots, \phi _* V^{(k)})
 $$
 
 Similarly, for a $(k, 0)$ contravariant tensor $S$ that maps $k$ covectors to a real number, the pushforward is:
 
 $$
-\phi _*S(\omega _{(1)}, \dots, \omega _{(k)}) = S(\phi ^*\omega _{(1)}, \dots, \phi ^*\omega _{(k)})
+\phi _* S(\omega _{(1)}, \dots, \omega _{(k)}) = S(\phi ^* \omega _{(1)}, \dots, \phi ^* \omega _{(k)})
 $$
 
 In component form, both resemble the familiar tensor transformation laws:
 
 $$
-(\phi ^*T) _{\mu_{1}, \dots, \mu _{k}} = \frac{\partial y^{\alpha _{1}}}{\partial x^{\mu _{1}}} \dots \frac{\partial y^{\alpha _{k}}}{\partial x^{\mu _{k}}} T _{\alpha _{1} \dots \alpha _{k}}
+(\phi ^* T) _ {\mu _{1}, \dots, \mu _{k}} = \frac{\partial y^{\alpha _{1}}}{\partial x^{\mu _{1}}} \dots \frac{\partial y^{\alpha _{k}}}{\partial x^{\mu _{k}}} T _{\alpha _{1} \dots \alpha _{k}}
 $$
 
 $$
