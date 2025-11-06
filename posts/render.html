@@ -52,18 +52,22 @@
           return res.text();
         })
         .then(md => {
-          const converter = new showdown.Converter({
-            tables: true,
-            ghCodeBlocks: true
-          });
-          const html = converter.makeHtml(md);
-          container.innerHTML = html;
+            const converter = new showdown.Converter({
+              tables: true,
+              ghCodeBlocks: true,
+              simpleLineBreaks: true,
+              literalMidWordUnderscores: true  // <-- prevents '_' from being treated as italic
+            });
+          
+            const html = converter.makeHtml(md);
+            container.innerHTML = html;
+          
+            // Render MathJax
+            if (window.MathJax && window.MathJax.typesetPromise) {
+              window.MathJax.typesetPromise([container]);
+            }
+          })
 
-          // Render MathJax
-          if (window.MathJax && window.MathJax.typesetPromise) {
-            window.MathJax.typesetPromise([container]);
-          }
-        })
         .catch(err => {
           container.innerHTML = "<p>Error loading post.</p>";
           console.error(err);
