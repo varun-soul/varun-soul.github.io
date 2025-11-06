@@ -112,7 +112,7 @@ Most importantly, diffeomorphisms allow us to handle **mixed-rank tensors** cons
 
 $$
 \phi _ * T(\omega_{(1)}, \ldots, \omega _{(r)}, V^{(1)}, \ldots, V^{(s)})
-= T\big( \phi ^* \omega _{(1)}, \ldots, \phi ^* \omega _{(r)}, \phi _*^{-1} V^{(1)}, \ldots, \phi _*^{-1} V^{(s)} \big)
+= T\big( \phi ^* \omega _{(1)}, \ldots, \phi ^ * \omega _{(r)}, \phi _ * ^{-1} V^{(1)}, \ldots, \phi _ * ^{-1} V^{(s)} \big)
 $$
 
 ## Self-Diffeomorphisms :
