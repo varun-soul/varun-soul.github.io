@@ -7,7 +7,7 @@ I know — it sounds pretty barbaric, right? The name might conjure up images of
 We often deal with smooth maps between two manifolds of interest, $M$ and $N$. Such maps allow us to carry vector and tensor fields from one manifold to another. For a smooth map $\phi : M \rightarrow N$, we define something called the **pushforward** of $\phi$ as the map:
 
 $$
-\phi _* : TM \to TN \implies \phi _*: X \to \phi _*(X)
+\phi _* : TM \to TN \implies \phi _ * : \ X \to \phi _ *(X)
 $$
 
 where $X$ is a vector defined at some point $p$ on $M$, and $\phi _*(X)$ is a vector at the corresponding point $\phi(p)$ on $N$.
