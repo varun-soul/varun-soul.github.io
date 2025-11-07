@@ -160,13 +160,17 @@ $$
 \gamma _p(t) = \phi _t(p).
 $$
 
+<center>
+<img width="282" height="245" alt="image" src="https://github.com/user-attachments/assets/38c00bea-3bbf-443d-b624-73e3cfc9d675" />
+</center>
+
 These trajectories **cannot intersect**. To see this, suppose two curves $\gamma _p$ and $\gamma _q$ intersect. Then for some $t _1$ and $t _2$,
 
 $$
 \phi _{t _{1}}(p) = \phi _{t _{2}}(q).
 $$
 
-Since diffeomorphisms are invertible, apply $\phi _{-t_{2}}$ to both sides:
+Since diffeomorphisms are invertible, apply $\phi _{-t _{2}}$ to both sides:
 
 $$
 \phi _{t _{1} - t _{2}}(p) = q.
