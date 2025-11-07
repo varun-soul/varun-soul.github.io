@@ -228,18 +228,13 @@ $$
 We can do something similar for covectors. If $\omega$ is a covector field, the Lie derivative along $V$ becomes
 
 $$
-\mathcal{L} _{V} \omega
-= V^\nu \partial _{\nu} \omega _{\mu}
-+ \omega _{\nu} \partial _{\mu} V^\nu .
+\mathcal{L} _{V} \omega = V^\nu \partial _{\nu} \omega _{\mu} + \omega _{\nu} \partial _{\mu} V^\nu .
 $$
 
 Once we know how vectors and covectors transform, it’s straightforward to generalize the Lie derivative to any tensor field. For a mixed tensor $T^a _{b}$, we get
 
 $$
-\mathcal{L} _{V} T^a _{b}
-= V^c \partial _{c} T^a _{b}
-- T^c _{b} \partial _{c} V^a
-+ T^a _{c} \partial _{a} V^c .
+\mathcal{L} _{V} T^a _{b}= V^c \partial _{c} T^a _{b}- T^c _{b} \partial _{c} V^a+ T^a _{c} \partial _{a} V^c .
 $$
 
 This expression is already tensorial, but if we want to make it look explicitly covariant, we can swap partial derivatives for covariant derivatives:
