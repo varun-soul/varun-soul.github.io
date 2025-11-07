@@ -122,8 +122,10 @@ Finally, what happens when a diffeomorphism maps a manifold to itself — a **se
 Such a transformation smoothly rearranges points on the manifold without changing its intrinsic structure. You can think of it as a gentle reshaping of the manifold that neither tears nor glues it, nor introduces anything new.
 
 Consider the following illustration:
-
+<center>
 <img width="696" height="331" alt="image" src="https://github.com/user-attachments/assets/9f0b0ee4-055d-45f6-8bd0-b0ceea263c6f" />
+</center>
+
 
 
 Here, we have a flat surface representing our manifold $M$. A diffeomorphism to itself preserves the structure but shifts the points. The plane has been smoothly deformed — no tearing, gluing, or addition of new points.
