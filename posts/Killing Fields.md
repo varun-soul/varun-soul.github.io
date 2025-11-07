@@ -144,12 +144,15 @@ This naturally raises a question: since we can define such differences, is it po
 A single discrete diffeomorphism is not enough for this purpose. What we need is a **smooth one-parameter family of diffeomorphisms**, which we denote by $\phi _t : \mathbb{R} \times M \to M$.
 
 For each $t \in \mathbb{R}$, the map $\phi _t$ is a diffeomorphism satisfying
+
 $$
 (\phi _t \circ \phi _s) = \phi _{s+t},
 $$
+
 and the special case
+
 $$
-\phi _0 = \text{Id}_M.
+\phi _0 = Id _M.
 $$
 
 Under the action of this family, each point $p$ of the manifold traces out a trajectory:
@@ -157,14 +160,18 @@ $$
 \gamma _p(t) = \phi _t(p).
 $$
 
-These trajectories **cannot intersect**. To see this, suppose two curves $\gamma _p$ and $\gamma _q$ intersect. Then for some $t_1$ and $t_2$,
+These trajectories **cannot intersect**. To see this, suppose two curves $\gamma _p$ and $\gamma _q$ intersect. Then for some $t _1$ and $t _2$,
+
 $$
 \phi _{t _{1}}(p) = \phi _{t _{2}}(q).
 $$
+
 Since diffeomorphisms are invertible, apply $\phi _{-t_{2}}$ to both sides:
+
 $$
 \phi _{t _{1} - t _{2}}(p) = q.
 $$
+
 Thus, $q$ lies on the trajectory of $p$, meaning the two curves are actually the *same* curve with different parameter values. Hence, distinct trajectories cannot intersect.
 
 ## Integral Curves and Flows :
