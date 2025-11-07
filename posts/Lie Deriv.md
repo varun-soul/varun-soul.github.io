@@ -1,6 +1,5 @@
-# Killing Fields :
-
-I know — it sounds pretty barbaric, right? The name might conjure up images of blood and destruction, but for us, a *Killing field* is quite the opposite. It’s not a destroyer, but a preserver. Before we get into what that means, let’s first build some of the mathematical groundwork we’ll need.
+# Lie Derivatives :
+This was one of the topics which wasn't covered in our GR course but I thought was quite important. Hence me writing this post. Its actually quite interesting to learn this and this all will be used in the future for symmetries of the spacetime and Killing fields as well. We'll start by getting some of the pre-requisite maths out of the way.
 
 ## Pushforwards :
 
