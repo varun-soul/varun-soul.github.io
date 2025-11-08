@@ -240,10 +240,7 @@ $$
 This expression is already tensorial, but if we want to make it look explicitly covariant, we can swap partial derivatives for covariant derivatives:
 
 $$
-\mathcal{L}_{V} T^a _{b}
-= V^c \nabla _{c} T^a _{b}
-- T^c _{b} \nabla _{c} V^a
-+ T^a _{c} \nabla _{a} V^c .
+\mathcal{L}_{V} T^a _{b} = V^c \nabla _{c} T^a _{b} - T^c _{b} \nabla _{c} V^a + T^a _{c} \nabla _{a} V^c .
 $$
 
 In the end, we now have a way to measure how some tensor field changes as we slide along the flow of a vector field, completely independent of coordinates or any other structure (unlike our covariant derivative). But this is just the machinery for something even better, Killing vector fields, which I will talk about in the future.
