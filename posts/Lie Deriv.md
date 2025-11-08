@@ -198,7 +198,9 @@ $$
 = \phi ^* T^r _{s} \big( \phi(p) \big) - T^r _{s}(p) .
 $$
 
-(IMAGE)
+<center>
+<img width="459" height="269" alt="image" src="https://github.com/user-attachments/assets/ea1de753-f64d-4aac-ab43-e2f8b5c99951" />
+</center>
 
 With this in place, we define the Lie derivative of a tensor field along the flow of $X$ by taking the limit:
 
