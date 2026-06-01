@@ -6,11 +6,9 @@ subtitle:
 
 profile:
   align: right
-  image: varun2.png
-  image_circular: true
-  # crops the image to make it circular
-  more_info: >
-    
+  image: prof_pic.jpg
+  image_circular: false # crops the image to make it circular
+  more_info: 
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -25,9 +23,9 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-I am a Master's student working under Professor Ritam Mallick with the Compact Object Astrophysics ([**COAST**](https://sites.google.com/iiserb.ac.in/coast/group-iiserb)) group at IISERB. 
 
-My current interests lie in the physics of neutron stars and compact objects. In particular, I am interested in exploring the maximum mass and compactness of neutron stars, investigating the possible mass gap between neutron stars and black holes, and exploring what multi-messenger observations can reveal about the nature of dense matter under extreme conditions.
+I am a Master's student working under Professor Ritam Mallick, in the Compact Object Astrophysics ([**COAST**]()) group at IISERB.
 
-To study these questions, I have developed an interest in numerical relativity and computational astrophysics. I have worked with 1D codes such as GR1D and I am currently exploring more advanced frameworks like the Einstein Toolkit. Through these tools, I aim to better understand phenomena such as compact-object mergers, gravitational collapse and tidal disruption events in NS-BH binaries.
+My current interests lie in the physics of neutron stars and compact objects. In particular, I am interested in exploring the maximum mass and maximum compactness of neutron stars, investigating the possible mass gap between neutron stars and black holes, and exploring what multi-messenger observations can reveal about the nature of dense matter under extreme conditions.
 
+To study these questions, I have developed an interest in numerical relativity and computational astrophysics. I have worked with 1-D codes such as GR1D and I am exploring more advanced frameworks such as the Einstein Toolkit. Through these tools, I aim to better understand phenomena such as compact object mergers, gravitational collapse and tidal disruption events in NS-BH binaries.
