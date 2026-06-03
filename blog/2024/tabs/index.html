@@ -125,6 +125,13 @@
 <link rel="canonical" href="https://varun-soul.github.io/blog/2024/tabs/">
 
 
+  <!-- Dark Mode -->
+  <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script>
+  <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark">
+  <script>
+    initTheme();
+  </script>
+
 
 
 
@@ -343,6 +350,15 @@
             </li>
           
           
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme">
+                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+              </button>
+            </li>
+          
         </ul>
       </div>
     </div>
@@ -439,7 +455,7 @@ Content 2
 
 <p>With this you can generate visualizations like:</p>
 
-<ul id="log" class="tab" data-tab="7f854059-2993-478b-aff3-3f04c8f30007" data-name="log">
+<ul id="log" class="tab" data-tab="2b2b0545-2f4c-4e58-8a55-cb2265bdbbfb" data-name="log">
   
       <li class="active" id="log-php">
           <a href="#">php </a>
@@ -454,7 +470,7 @@ Content 2
       </li>
   
 </ul>
-<ul class="tab-content" id="7f854059-2993-478b-aff3-3f04c8f30007" data-name="log">
+<ul class="tab-content" id="2b2b0545-2f4c-4e58-8a55-cb2265bdbbfb" data-name="log">
   
       <li class="active">
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
@@ -478,7 +494,7 @@ Content 2
 
 <h2 id="another-example">Another example</h2>
 
-<ul id="data-struct" class="tab" data-tab="727db8b9-f4b4-47a6-84ff-e9d7f97661d6" data-name="data-struct">
+<ul id="data-struct" class="tab" data-tab="48542eca-4e84-418a-88e9-26d68fa7a3d6" data-name="data-struct">
   
       <li class="active" id="data-struct-yaml">
           <a href="#">yaml </a>
@@ -489,7 +505,7 @@ Content 2
       </li>
   
 </ul>
-<ul class="tab-content" id="727db8b9-f4b4-47a6-84ff-e9d7f97661d6" data-name="data-struct">
+<ul class="tab-content" id="48542eca-4e84-418a-88e9-26d68fa7a3d6" data-name="data-struct">
   
       <li class="active">
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
@@ -511,7 +527,7 @@ Content 2
 
 <h2 id="tabs-for-something-else">Tabs for something else</h2>
 
-<ul id="something-else" class="tab" data-tab="7a013a59-0797-47b2-a46d-ad829fb635da" data-name="something-else">
+<ul id="something-else" class="tab" data-tab="17d05c68-1e4f-4301-8033-510b70d5d7e0" data-name="something-else">
   
       <li class="active" id="something-else-text">
           <a href="#">text </a>
@@ -526,7 +542,7 @@ Content 2
       </li>
   
 </ul>
-<ul class="tab-content" id="7a013a59-0797-47b2-a46d-ad829fb635da" data-name="something-else">
+<ul class="tab-content" id="17d05c68-1e4f-4301-8033-510b70d5d7e0" data-name="something-else">
   
       <li class="active">
 <p>Regular text</p>
@@ -668,7 +684,7 @@ Content 2
 
   
   
-    Last updated: June 01, 2026.
+    Last updated: June 03, 2026.
   
 
     </div>
@@ -1238,7 +1254,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
+          window.open("mailto:%76%61%72%75%6E%6E%32%32@%69%69%73%65%72%62.%61%63.%69%6E", "_blank");
         },
       },{
         id: 'social-inspire',
@@ -1268,7 +1284,33 @@ ninja.data = [{
         handler: () => {
           window.open("https://www.alberteinstein.com/", "_blank");
         },
-      },];
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
 
 </script>
 <script src="/assets/al_search/js/shortcut-key.js"></script>
