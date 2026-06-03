@@ -1,0 +1,441 @@
+/* ==========================================================================
+   VARUN'S CELESTIAL LUXURY THEME
+   Midnight, luminous, refined, and a little cosmic.
+   Place your background image at: assets/img/background.jpg
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Theme tokens
+   -------------------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+
+
+  --global-bg-color: #f6efe6;
+  --global-card-bg-color: rgba(255, 255, 255, 0.72);
+  --global-code-bg-color: #f3efe8;
+
+  --global-text-color: #141414;
+  --global-text-color-light: #626a76;
+
+  --global-theme-color: #7056ff;
+  --global-hover-color: #4c36d6;
+  --global-hover-text-color: #ffffff;
+
+  --global-divider-color: rgba(20, 20, 20, 0.10);
+
+  --global-footer-bg-color: rgba(246, 239, 230, 0.82);
+  --global-footer-text-color: #6b7280;
+  --global-footer-link-color: #141414;
+
+  --global-highlight-color: #b9731b;
+
+  --global-back-to-top-bg-color: rgba(20, 20, 20, 0.08);
+  --global-back-to-top-text-color: #141414;
+
+  --global-newsletter-bg-color: rgba(255, 255, 255, 0.60);
+  --global-newsletter-text-color: #141414;
+
+  --global-tip-block: #0f766e;
+  --global-tip-block-bg: rgba(15, 118, 110, 0.10);
+  --global-tip-block-text: #134e4a;
+  --global-tip-block-title: #0f766e;
+
+  --global-warning-block: #c27803;
+  --global-warning-block-bg: rgba(194, 120, 3, 0.10);
+  --global-warning-block-text: #78350f;
+  --global-warning-block-title: #b45309;
+
+  --global-danger-block: #dc2626;
+  --global-danger-block-bg: rgba(220, 38, 38, 0.10);
+  --global-danger-block-text: #7f1d1d;
+  --global-danger-block-title: #b91c1c;
+}
+
+html[data-theme="dark"],
+html.dark {
+  color-scheme: dark;
+
+  --global-bg-color: #050816;
+  --global-card-bg-color: rgba(12, 20, 40, 0.82);
+  --global-code-bg-color: #0b1328;
+
+  --global-text-color: #eef3ff;
+  --global-text-color-light: #9ca8c7;
+
+  /* Main accent */
+  
+  --global-theme-color: #7dd3fc;
+  --global-hover-color: #d7f2ff;
+
+  --global-hover-text-color: #ffffff;
+  --global-divider-color: rgba(255, 255, 255, 0.08);
+
+  --global-footer-bg-color: rgba(5, 8, 22, 0.75);
+  --global-footer-text-color: #8f9ab5;
+  --global-footer-link-color: #eef3ff;
+
+  /* Gold for special elements */
+  --global-highlight-color: #d4af37;
+
+  --global-back-to-top-bg-color: rgba(255, 255, 255, 0.08);
+  --global-back-to-top-text-color: #eef3ff;
+
+  --global-newsletter-bg-color: rgba(255, 255, 255, 0.05);
+  --global-newsletter-text-color: #eef3ff;
+
+  /* Success */
+  --global-tip-block: #55e6d0;
+  --global-tip-block-bg: rgba(85, 230, 208, 0.12);
+  --global-tip-block-text: #b6fff5;
+  --global-tip-block-title: #55e6d0;
+
+  /* Warning */
+  --global-warning-block: #f3c66b;
+  --global-warning-block-bg: rgba(243, 198, 107, 0.12);
+  --global-warning-block-text: #ffe7b3;
+  --global-warning-block-title: #f3c66b;
+
+  /* Danger */
+  --global-danger-block: #ff8d8d;
+  --global-danger-block-bg: rgba(255, 141, 141, 0.12);
+  --global-danger-block-text: #ffd1d1;
+  --global-danger-block-title: #ff8d8d;
+}
+
+/* --------------------------------------------------------------------------
+   Cosmic background layer
+   -------------------------------------------------------------------------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(5, 8, 22, 0.72), rgba(5, 8, 22, 0.82)),
+    url("../img/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: blur(6px);
+  transform: scale(1.08);
+  z-index: -2;
+  pointer-events: none;
+}
+
+html[data-theme="dark"] body::before,
+html.dark body::before {
+  background:
+    linear-gradient(rgba(5, 8, 22, 0.62), rgba(5, 8, 22, 0.78)),
+    url("../img/background.jpg");
+}
+
+/* --------------------------------------------------------------------------
+   Cosmic atmosphere
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--global-text-color);
+  background: transparent;
+}
+
+a {
+  color: var(--global-theme-color);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  transition: color 160ms ease, opacity 160ms ease;
+}
+
+a:hover {
+  color: var(--global-hover-color);
+}
+
+::selection {
+  background: rgba(112, 86, 255, 0.20);
+  color: inherit;
+}
+
+hr {
+  border-color: var(--global-divider-color);
+}
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: var(--global-text-color);
+}
+
+h1 {
+  text-shadow: 0 0 30px rgba(199, 183, 255, 0.15);
+}
+
+h2 {
+  text-shadow: 0 0 20px rgba(199, 183, 255, 0.10);
+}
+
+p,
+li {
+  line-height: 1.75;
+  color: var(--global-text-color);
+}
+
+blockquote {
+  border-left: 3px solid var(--global-theme-color);
+  background: rgba(127, 127, 127, 0.06);
+  color: var(--global-text-color-light);
+  border-radius: 0 14px 14px 0;
+  padding: 1rem 1.1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Code
+   -------------------------------------------------------------------------- */
+pre,
+code,
+pre code {
+  background: var(--global-code-bg-color);
+}
+
+pre {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+code {
+  border-radius: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+#navbar {
+  background-color: rgba(246, 239, 230, 0.74) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--global-divider-color) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34);
+}
+
+html[data-theme="dark"] #navbar,
+html.dark #navbar {
+  background-color: rgba(5, 8, 22, 0.76) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+#navbar .navbar-brand,
+#navbar .nav-link {
+  color: var(--global-text-color) !important;
+}
+
+#navbar .nav-link {
+  opacity: 0.86;
+}
+
+#navbar .nav-link:hover,
+#navbar .navbar-brand:hover {
+  color: var(--global-theme-color) !important;
+  opacity: 1;
+}
+
+.navbar-toggler {
+  border-color: var(--global-divider-color) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.18rem rgba(112, 86, 255, 0.18);
+}
+
+/* --------------------------------------------------------------------------
+   Cards / panels
+   -------------------------------------------------------------------------- */
+.card,
+.post-preview,
+.project-card,
+.news-card,
+.about,
+.profile,
+#news,
+#recent-posts,
+#blog,
+#projects {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 22px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.card:hover,
+.post-preview:hover,
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.10);
+}
+
+main .container,
+main .container-fluid {
+  max-width: 1080px;
+}
+
+.about {
+  padding: 1.2rem;
+}
+
+.profile {
+  padding: 1rem;
+}
+
+.profile img {
+  border-radius: 20px;
+  border: 1px solid var(--global-divider-color);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.11);
+}
+
+article img,
+.card img,
+.post-preview img,
+.project-card img,
+.news-card img,
+.about img,
+.profile img {
+  border-radius: 18px;
+}
+
+.profile {
+  box-shadow:
+    0 0 0 1px rgba(184, 156, 255, 0.15),
+    0 0 30px rgba(184, 156, 255, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn,
+button,
+input[type="submit"] {
+  border-radius: 999px;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(112, 86, 255, 0.14);
+}
+
+/* --------------------------------------------------------------------------
+   Back to top
+   -------------------------------------------------------------------------- */
+#back-to-top {
+  color: var(--global-back-to-top-text-color);
+  background: var(--global-back-to-top-bg-color);
+  bottom: 15px;
+  right: 15px;
+  height: 40px;
+  width: 40px;
+  z-index: 999;
+  border-radius: 999px;
+  border: 1px solid var(--global-divider-color);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   Search modal / ninja-keys
+   Luxurious, dark, and polished
+   -------------------------------------------------------------------------- */
+ninja-keys {
+  --ninja-modal-background: rgba(8, 10, 18, 0.96);
+  --ninja-window-background: rgba(15, 23, 42, 0.98);
+  --ninja-background: rgba(15, 23, 42, 0.98);
+
+  --ninja-text-color: #ecf0f7;
+  --ninja-icon-color: #ecf0f7;
+
+  --ninja-secondary-background-color: rgba(255, 255, 255, 0.06);
+  --ninja-secondary-text-color: #a8b0c0;
+
+  --ninja-selected-background: rgba(112, 86, 255, 0.26);
+}
+
+ninja-keys::part(overlay) {
+  background: rgba(0, 0, 0, 0.74) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+ninja-keys::part(modal) {
+  background: rgba(15, 23, 42, 0.98) !important;
+  color: #ecf0f7 !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.58) !important;
+}
+
+ninja-keys::part(search-input),
+ninja-keys::part(input) {
+  color: #ecf0f7 !important;
+  background: transparent !important;
+  caret-color: #c7b7ff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
+}
+
+ninja-keys::part(result),
+ninja-keys::part(result-item),
+ninja-keys::part(item) {
+  color: #ecf0f7 !important;
+  background: transparent !important;
+}
+
+ninja-keys::part(selected),
+ninja-keys::part(result-selected),
+ninja-keys::part(item-selected) {
+  background: rgba(112, 86, 255, 0.26) !important;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border-color: var(--global-divider-color) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Small polish
+   -------------------------------------------------------------------------- */
+small,
+.text-muted {
+  color: var(--global-text-color-light) !important;
+}
+
+.lh-tight {
+  line-height: 1.15;
+}
+
+.pagination .page-link:hover {
+  background-color: rgba(125, 211, 252, 0.15) !important;
+  color: #eef3ff !important;
+  box-shadow: 0 0 12px rgba(125, 211, 252, 0.20);
+}
