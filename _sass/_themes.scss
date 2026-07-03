@@ -236,6 +236,7 @@ html.dark #navbar {
 #navbar .navbar-brand,
 #navbar .nav-link {
   color: var(--global-text-color) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease, opacity 0.3s ease !important;
 }
 
 #navbar .nav-link {
@@ -246,6 +247,7 @@ html.dark #navbar {
 #navbar .navbar-brand:hover {
   color: var(--global-theme-color) !important;
   opacity: 1;
+  transform: translateY(-1px);
 }
 
 .navbar-toggler {
@@ -275,13 +277,15 @@ html.dark #navbar {
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.5s ease;
 }
 
 .card:hover,
 .post-preview:hover,
-.project-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.10);
+.project-card:hover,
+.news-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 32px 64px rgba(112, 86, 255, 0.12);
 }
 
 main .container,
@@ -301,6 +305,12 @@ main .container-fluid {
   border-radius: 20px;
   border: 1px solid var(--global-divider-color);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.11);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile img:hover {
+  transform: scale(1.03) rotate(1.5deg);
+  box-shadow: 0 20px 48px rgba(184, 156, 255, 0.25);
 }
 
 article img,
@@ -326,14 +336,21 @@ article img,
 button,
 input[type="submit"] {
   border-radius: 999px;
-  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
 }
 
 .btn:hover,
 button:hover,
 input[type="submit"]:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 26px rgba(112, 86, 255, 0.14);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(112, 86, 255, 0.2);
+}
+
+.btn:active,
+button:active,
+input[type="submit"]:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 4px 10px rgba(112, 86, 255, 0.1);
 }
 
 /* --------------------------------------------------------------------------
@@ -438,4 +455,71 @@ small,
   background-color: rgba(125, 211, 252, 0.15) !important;
   color: #eef3ff !important;
   box-shadow: 0 0 12px rgba(125, 211, 252, 0.20);
+}
+
+/* --------------------------------------------------------------------------
+   Dynamic Page Load Animations (Professional Touch)
+   -------------------------------------------------------------------------- */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+.post-preview,
+.project-card,
+.news-card,
+.about,
+.profile,
+#news,
+#recent-posts,
+#blog,
+#projects,
+article,
+footer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card.visible,
+.post-preview.visible,
+.project-card.visible,
+.news-card.visible,
+.about.visible,
+.profile.visible,
+#news.visible,
+#recent-posts.visible,
+#blog.visible,
+#projects.visible,
+article.visible,
+footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger entrance for components when they become visible */
+.profile.visible { transition-delay: 0.1s; }
+.about.visible { transition-delay: 0.2s; }
+#news.visible { transition-delay: 0.3s; }
+#recent-posts.visible { transition-delay: 0.4s; }
+#blog.visible { transition-delay: 0.5s; }
+#projects.visible { transition-delay: 0.6s; }
+footer.visible { transition-delay: 0.2s; }
+
+/* --------------------------------------------------------------------------
+   Fake SPA Page Transitions (#6)
+   -------------------------------------------------------------------------- */
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+body.page-loaded {
+  opacity: 1;
 }
