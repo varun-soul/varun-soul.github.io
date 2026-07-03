@@ -559,7 +559,7 @@
 
   
   
-    Last updated: June 14, 2026.
+    Last updated: July 03, 2026.
   
 
     </div>
@@ -1192,6 +1192,100 @@ ninja.data = [{
 
 
 
+
+<!-- Custom Scripts for Dynamic Transitions -->
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Fake SPA Transitions (#6)
+  document.body.classList.add('page-loaded');
+
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', e => {
+      // Intercept local links only (skip hashes and external targets)
+      const isLocal = link.hostname === window.location.hostname;
+      const isHash = link.hash && link.pathname === window.location.pathname;
+      const isDownload = link.hasAttribute('download');
+      const isBlank = link.target === '_blank';
+      
+      if (isLocal && !isHash && !isDownload && !isBlank && !link.href.includes('javascript:')) {
+        e.preventDefault();
+        document.body.classList.remove('page-loaded');
+        setTimeout(() => {
+          window.location = link.href;
+        }, 400); // matches CSS transition duration
+      }
+    });
+  });
+
+  // 2. Scroll-Triggered Parallax Reveals (#5)
+  const revealElements = document.querySelectorAll('.card, .post-preview, .project-card, .news-card, .about, .profile, #news, #recent-posts, #blog, #projects, article, footer');
+  
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -40px 0px"
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // 3. Typewriter Intro (#7)
+  const path = window.location.pathname;
+  let titleElement = null;
+  let descElement = null;
+
+  if (path === '/' || path.endsWith('al-folio/')) {
+    titleElement = document.querySelector('.post-header .post-title');
+    descElement = document.querySelector('.post-header .desc');
+  } else if (path.includes('blog')) {
+    titleElement = document.querySelector('.header-bar h1');
+    descElement = document.querySelector('.header-bar h2');
+  } else if (path.includes('projects')) {
+    titleElement = document.querySelector('.post-header .post-title');
+    descElement = document.querySelector('.post-header .post-description');
+  }
+
+  if (titleElement) {
+    const origTitle = titleElement.innerHTML;
+    titleElement.innerHTML = '';
+    
+    let origDesc = '';
+    if (descElement) {
+      origDesc = descElement.innerHTML;
+      descElement.innerHTML = '';
+    }
+    
+    const tw = new Typewriter(titleElement, {
+      delay: 45,
+      cursor: "<span style='color: var(--global-theme-color); font-weight: 300;'>|</span>"
+    });
+    
+    tw.typeString(origTitle.trim());
+    
+    if (descElement && origDesc.trim() !== '') {
+      tw.callFunction(() => {
+        // Hide the cursor on the main title when moving to the description
+        const cursor = titleElement.querySelector('.Typewriter__cursor');
+        if (cursor) cursor.style.display = 'none';
+        
+        const tw2 = new Typewriter(descElement, {
+          delay: 35,
+          cursor: "<span style='color: var(--global-theme-color); font-weight: 300;'>|</span>"
+        });
+        tw2.typeString(origDesc.trim()).start();
+      });
+    }
+    
+    tw.start();
+  }
+});
+</script>
 
   </body>
 </html>
