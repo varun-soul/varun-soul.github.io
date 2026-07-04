@@ -18,5 +18,9 @@ module.exports = {
     "font-weight-bold",
     "font-weight-medium",
     "font-weight-lighter",
+    "visible",
+    "page-loaded",
+    "Typewriter__cursor",
+    "Typewriter__wrapper"
   ],
 };
